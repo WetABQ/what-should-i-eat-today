@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
 import StarRating from '../components/StarRating.vue'
-
-interface Rating {
-  food_name: string
-  score: number  // 1-10
-  dining_hall: string | null
-  created_at: string
-  updated_at: string
-}
+import {
+  ratings,
+  setRating,
+  deleteRating as deleteRatingFromStore,
+  importRatings,
+  exportRatings,
+  type Rating
+} from '../stores/ratings'
 
 interface Preset {
   name: string
@@ -17,10 +17,9 @@ interface Preset {
   description: string
 }
 
-const ratings = ref<Rating[]>([])
 const loading = ref(false)
 
-// Presets state
+// Presets state (still server-based for now)
 const presets = ref<Preset[]>([])
 const activePreset = ref<string | null>(null)
 const showNewPresetModal = ref(false)
@@ -29,58 +28,22 @@ const newPresetDescription = ref('')
 const presetLoading = ref(false)
 
 onMounted(async () => {
-  await Promise.all([
-    fetchRatings(),
-    fetchPresets()
-  ])
+  // Ratings already loaded from localStorage
+  // Only fetch presets from server
+  await fetchPresets()
 })
 
-async function fetchRatings() {
-  loading.value = true
-  try {
-    const res = await fetch('/api/ratings')
-    ratings.value = await res.json()
-  } catch (e) {
-    console.error('Failed to fetch ratings:', e)
-  } finally {
-    loading.value = false
-  }
+function updateRating(foodName: string, score: number) {
+  setRating(foodName, score)
 }
 
-async function updateRating(foodName: string, score: number) {
-  // Optimistic update
-  const rating = ratings.value.find(r => r.food_name === foodName)
-  if (rating) {
-    rating.score = score
-  }
-
-  // Save to server
-  fetch('/api/ratings', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      food_name: foodName,
-      score,
-    }),
-  }).catch(e => {
-    console.error('Failed to update rating:', e)
-  })
-}
-
-async function deleteRating(foodName: string) {
-  try {
-    await fetch(`/api/ratings/${encodeURIComponent(foodName)}`, {
-      method: 'DELETE',
-    })
-    ratings.value = ratings.value.filter(r => r.food_name !== foodName)
-  } catch (e) {
-    console.error('Failed to delete rating:', e)
-  }
+function deleteRating(foodName: string) {
+  deleteRatingFromStore(foodName)
 }
 
 // Sort by score descending (computed, so it auto-updates)
 const sortedRatings = computed(() => {
-  return [...ratings.value].sort((a, b) => b.score - a.score)
+  return [...ratings.value].sort((a: Rating, b: Rating) => b.score - a.score)
 })
 
 function getScoreClass(score: number): string {
@@ -93,8 +56,8 @@ function getScoreClass(score: number): string {
 // Stats
 const stats = computed(() => {
   const total = ratings.value.length
-  const high = ratings.value.filter(r => r.score >= 8).length
-  const low = ratings.value.filter(r => r.score >= 2 && r.score <= 3).length
+  const high = ratings.value.filter((r: Rating) => r.score >= 8).length
+  const low = ratings.value.filter((r: Rating) => r.score >= 2 && r.score <= 3).length
   return { total, high, low }
 })
 
@@ -174,11 +137,13 @@ function formatDate(dateStr: string): string {
   return date.toLocaleDateString()
 }
 
-// Import/Export
-async function exportData() {
+// Import/Export (using localStorage)
+function exportData() {
   try {
-    const res = await fetch('/api/export')
-    const data = await res.json()
+    const data = {
+      ratings: exportRatings(),
+      exported_at: new Date().toISOString(),
+    }
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
@@ -192,7 +157,7 @@ async function exportData() {
   }
 }
 
-async function importData() {
+function importData() {
   const input = document.createElement('input')
   input.type = 'file'
   input.accept = '.json'
@@ -204,14 +169,11 @@ async function importData() {
       const text = await file.text()
       const data = JSON.parse(text)
 
-      await fetch('/api/import', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      })
+      // Support both old format (data.ratings) and new format (direct array)
+      const ratingsData = Array.isArray(data) ? data : (data.ratings || [])
+      importRatings(ratingsData)
 
-      await fetchRatings()
-      alert(`Imported ${data.ratings?.length || 0} ratings`)
+      alert(`Imported ${ratingsData.length} ratings to browser storage`)
     } catch (e) {
       console.error('Failed to import:', e)
       alert('Import failed - invalid file format')

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, watch, computed } from 'vue'
 import FoodRating from '../components/FoodRating.vue'
+import { getRatingsDict, getRating, setRating } from '../stores/ratings'
 
 interface DiningHall {
   id: number
@@ -53,19 +54,12 @@ const loading = ref(false)
 const showRecommendation = ref(true)
 const refreshing = ref(false)
 
-// Local ratings cache - key is food_name, value is score
-const localRatings = ref<Record<string, number>>({})
-
-// Track pending rating saves
-const pendingRatings = ref<Set<string>>(new Set())
-
 const mealTypes = ['breakfast', 'lunch', 'dinner']
 
 onMounted(async () => {
   await Promise.all([
     fetchDiningHalls(),
-    fetchRecommendation(),
-    fetchExistingRatings()
+    fetchRecommendation()
   ])
 })
 
@@ -94,24 +88,18 @@ async function fetchDiningHalls() {
   }
 }
 
-async function fetchExistingRatings() {
-  try {
-    const res = await fetch('/api/ratings', { cache: 'no-store' })
-    const ratings = await res.json()
-    for (const rating of ratings) {
-      localRatings.value[rating.food_name] = rating.score
-    }
-  } catch (e) {
-    console.error('Failed to fetch ratings:', e)
-  }
-}
-
 async function fetchRecommendation() {
   loading.value = true
   try {
+    // Send ratings from localStorage to server for calculation
     const res = await fetch(
       `/api/recommend/${selectedDate.value}?meal_type=${selectedMeal.value}`,
-      { cache: 'no-store' }
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ratings: getRatingsDict() }),
+        cache: 'no-store'
+      }
     )
     recommendation.value = await res.json()
   } catch (e) {
@@ -137,37 +125,12 @@ async function fetchMenu() {
   }
 }
 
-async function rateFood(foodName: string, score: number) {
-  // Optimistic update - store locally first
-  localRatings.value[foodName] = score
-
-  // Track pending save
-  pendingRatings.value.add(foodName)
-
-  // Save to server
-  try {
-    await fetch('/api/ratings', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        food_name: foodName,
-        score,
-        dining_hall: selectedHall.value,
-      }),
-    })
-  } catch (e) {
-    console.error('Failed to save rating:', e)
-  } finally {
-    pendingRatings.value.delete(foodName)
-  }
+function rateFood(foodName: string, score: number) {
+  // Save to localStorage (instant, no server call needed)
+  setRating(foodName, score, selectedHall.value)
 }
 
 async function showRecommendations() {
-  // Wait for any pending rating saves to complete
-  while (pendingRatings.value.size > 0) {
-    await new Promise(resolve => setTimeout(resolve, 50))
-  }
-
   selectedHall.value = ''
   showRecommendation.value = true
   menu.value = null
@@ -176,11 +139,6 @@ async function showRecommendations() {
 
 function selectHallFromRanking(slug: string) {
   selectedHall.value = slug
-}
-
-// Get rating for a food item (from local cache)
-function getRating(foodName: string): number {
-  return localRatings.value[foodName] || 0
 }
 
 const currentMealItems = computed(() => {
@@ -196,7 +154,7 @@ const quickHoverScore = ref(0)
 
 function rateAllWithScore(score: number) {
   for (const item of currentMealItems.value) {
-    if (!localRatings.value[item.name]) {
+    if (!getRating(item.name)) {
       rateFood(item.name, score)
     }
   }

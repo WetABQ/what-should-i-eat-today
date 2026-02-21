@@ -156,12 +156,22 @@ async def get_menu(
     )
 
 
-@app.get("/api/recommend/{menu_date}")
+class RecommendRequest(BaseModel):
+    """Request body for recommendations with client-side ratings."""
+
+    ratings: dict[str, int] = {}  # food_name -> score
+
+
+@app.post("/api/recommend/{menu_date}")
 async def get_recommendation(
     menu_date: str,
+    request: RecommendRequest,
     meal_type: Annotated[str, Query()] = "lunch",
 ) -> DailyRecommendation:
-    """Get daily recommendation for all dining halls."""
+    """Get daily recommendation for all dining halls.
+
+    Accepts ratings from client to calculate rankings.
+    """
     try:
         parsed_date = date.fromisoformat(menu_date)
     except ValueError:
@@ -169,7 +179,10 @@ async def get_recommendation(
 
     menu_day = await fetch_all_menus(parsed_date, [meal_type])
     analyzer = get_analyzer()
-    recommendation = analyzer.analyze_day(menu_day, meal_type)
+
+    # Use client-provided ratings if available
+    ratings_dict = request.ratings if request.ratings else None
+    recommendation = analyzer.analyze_day(menu_day, meal_type, ratings_override=ratings_dict)
 
     return recommendation
 

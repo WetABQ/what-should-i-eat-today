@@ -74,6 +74,7 @@ class MenuAnalyzer:
         self,
         menu: DailyMenu,
         meal_type: str = "lunch",
+        ratings_override: dict[str, int] | None = None,
     ) -> DiningHallScore:
         """Score a dining hall's menu for a specific meal.
 
@@ -82,6 +83,9 @@ class MenuAnalyzer:
         - Score 2-10: Positive, counts toward ranking
 
         Rankings: first by count of 10s, then 9s, then 8s, etc.
+
+        Args:
+            ratings_override: If provided, use these ratings instead of storage.
         """
         meal = menu.meals.get(meal_type)
         if not meal:
@@ -97,7 +101,8 @@ class MenuAnalyzer:
         good_items = []  # 4-7 (2-3.5 stars)
         low_items = []  # 2-3 (1-1.5 stars)
 
-        ratings = self.storage.get_ratings_dict()
+        # Use override ratings if provided, otherwise load from storage
+        ratings = ratings_override if ratings_override is not None else self.storage.get_ratings_dict()
 
         for item in meal.items:
             if self._is_always_available(item.name):
@@ -136,12 +141,17 @@ class MenuAnalyzer:
         self,
         menu_day: MenuDay,
         meal_type: str = "lunch",
+        ratings_override: dict[str, int] | None = None,
     ) -> DailyRecommendation:
-        """Analyze all dining halls for a day and return recommendations."""
+        """Analyze all dining halls for a day and return recommendations.
+
+        Args:
+            ratings_override: If provided, use these ratings instead of storage.
+        """
         scores = []
 
         for daily_menu in menu_day.menus:
-            score = self.score_dining_hall(daily_menu, meal_type)
+            score = self.score_dining_hall(daily_menu, meal_type, ratings_override)
             scores.append(score)
 
         # Sort by: first count of 10s, then 9s, then 8s, etc. (all descending)
