@@ -38,7 +38,7 @@ env/
 # Data files (keep structure, ignore actual data)
 data/*.json
 data/*.txt
-data/cache/*.parquet
+data/cache/
 data/presets/
 
 # Node.js (Vue frontend)

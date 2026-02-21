@@ -23,17 +23,13 @@ logger = logging.getLogger(__name__)
 def main():
     """Main entry point for the Telegram bot."""
     token = os.getenv("TELEGRAM_BOT_TOKEN")
-    chat_id = os.getenv("TELEGRAM_CHAT_ID")
 
     if not token:
         logger.error("TELEGRAM_BOT_TOKEN environment variable not set")
         sys.exit(1)
 
-    if not chat_id:
-        logger.warning("TELEGRAM_CHAT_ID not set, daily push will be disabled")
-
-    bot = DiningBot(token=token, chat_id=chat_id)
-    bot.run(enable_daily_push=bool(chat_id))
+    bot = DiningBot(token=token)
+    bot.run(enable_daily_push=True)
 
 
 if __name__ == "__main__":
