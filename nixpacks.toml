@@ -1,5 +1,10 @@
-# Use Python provider for automatic pip handling
 providers = ["python", "node"]
+
+[variables]
+NODE_ENV = "development"
+
+[phases.install]
+cmds = ["cd web && npm ci --include=dev", "pip install -r requirements.txt"]
 
 [phases.build]
 cmds = ["cd web && npm run build"]
