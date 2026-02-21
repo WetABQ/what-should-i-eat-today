@@ -1,0 +1,2 @@
+# This file keeps the data directory in git
+# Parquet files are ignored via .gitignore

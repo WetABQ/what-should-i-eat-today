@@ -1,0 +1,28 @@
+[project]
+name = "what-should-i-eat-today"
+version = "0.1.0"
+description = "UW-Madison Dining Hall Menu Analyzer - Find the best dining hall based on your preferences"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.129.0",
+    "httpx>=0.28.1",
+    "polars>=1.38.1",
+    "pyarrow>=23.0.1",
+    "pydantic>=2.12.5",
+    "python-dotenv>=1.2.1",
+    "python-telegram-bot>=22.6",
+    "pyyaml>=6.0.3",
+    "uvicorn>=0.41.0",
+]
+
+[project.scripts]
+eat = "main:main"
+bot = "bot:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]

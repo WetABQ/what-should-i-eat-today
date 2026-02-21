@@ -1,0 +1,31 @@
+# What Should I Eat Today - Configuration
+
+# Always available items (filtered from analysis)
+always_available:
+  - "Salad Bar"
+  - "Fresh Fruit"
+  - "Soup of the Day"
+  - "Cereal"
+  - "Bagel"
+  - "Toast"
+  - "Coffee"
+  - "Tea"
+  - "Juice"
+
+# Dining halls to analyze (slugs)
+dining_halls:
+  - gordon-avenue-market
+  - four-lakes-market
+  - lizs-market
+  - lowell-market
+  - rhetas-market
+
+# Meal types to analyze
+meal_types:
+  - lunch
+  - dinner
+
+# Telegram bot settings
+telegram:
+  daily_push_time: "10:00"
+  timezone: "America/Chicago"
