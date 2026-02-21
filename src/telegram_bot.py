@@ -6,12 +6,24 @@ from datetime import date, time, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from telegram import Update
+from telegram import BotCommand, Update
 from telegram.ext import (
     Application,
     CommandHandler,
     ContextTypes,
 )
+
+# Bot commands for menu
+BOT_COMMANDS = [
+    BotCommand("today", "Get today's dining recommendations"),
+    BotCommand("tomorrow", "Get tomorrow's recommendations"),
+    BotCommand("menu", "View specific dining hall menu"),
+    BotCommand("halls", "List available dining halls"),
+    BotCommand("subscribe", "Subscribe to daily notifications"),
+    BotCommand("unsubscribe", "Unsubscribe from notifications"),
+    BotCommand("config", "View current configuration"),
+    BotCommand("help", "Show help message"),
+]
 
 from .analyzer import Config, get_analyzer
 from .scraper import (
@@ -57,6 +69,10 @@ class DiningBot:
 
     async def start(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         """Handle /start command."""
+        await self.help(update, context)
+
+    async def help(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+        """Handle /help command."""
         chat_id = update.effective_chat.id
         is_subscribed = chat_id in load_subscribers()
         sub_status = "✅ Subscribed" if is_subscribed else "❌ Not subscribed"
@@ -71,7 +87,8 @@ class DiningBot:
             "/halls - List available dining halls\n"
             "/subscribe - Subscribe to daily notifications\n"
             "/unsubscribe - Unsubscribe from daily notifications\n"
-            "/config - View current configuration\n\n"
+            "/config - View current configuration\n"
+            "/help - Show this help message\n\n"
             f"*Daily Push:* {sub_status}\n\n"
             "Example: `/menu gordon-avenue-market`",
             parse_mode="Markdown",
@@ -258,12 +275,18 @@ class DiningBot:
         except Exception as e:
             logger.exception("Failed to schedule daily push")
 
+    async def post_init(self, app: Application) -> None:
+        """Set up bot commands after initialization."""
+        await app.bot.set_my_commands(BOT_COMMANDS)
+        logger.info("Bot commands registered")
+
     def run(self, enable_daily_push: bool = True) -> None:
         """Run the bot."""
-        self.app = Application.builder().token(self.token).build()
+        self.app = Application.builder().token(self.token).post_init(self.post_init).build()
 
         # Add command handlers
         self.app.add_handler(CommandHandler("start", self.start))
+        self.app.add_handler(CommandHandler("help", self.help))
         self.app.add_handler(CommandHandler("today", self.today))
         self.app.add_handler(CommandHandler("tomorrow", self.tomorrow))
         self.app.add_handler(CommandHandler("menu", self.menu))
