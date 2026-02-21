@@ -173,6 +173,52 @@ function formatDate(dateStr: string): string {
   const date = new Date(dateStr)
   return date.toLocaleDateString()
 }
+
+// Import/Export
+async function exportData() {
+  try {
+    const res = await fetch('/api/export')
+    const data = await res.json()
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = `ratings-backup-${new Date().toISOString().split('T')[0]}.json`
+    a.click()
+    URL.revokeObjectURL(url)
+  } catch (e) {
+    console.error('Failed to export:', e)
+    alert('Export failed')
+  }
+}
+
+async function importData() {
+  const input = document.createElement('input')
+  input.type = 'file'
+  input.accept = '.json'
+  input.onchange = async (e) => {
+    const file = (e.target as HTMLInputElement).files?.[0]
+    if (!file) return
+
+    try {
+      const text = await file.text()
+      const data = JSON.parse(text)
+
+      await fetch('/api/import', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+
+      await fetchRatings()
+      alert(`Imported ${data.ratings?.length || 0} ratings`)
+    } catch (e) {
+      console.error('Failed to import:', e)
+      alert('Import failed - invalid file format')
+    }
+  }
+  input.click()
+}
 </script>
 
 <template>
@@ -181,9 +227,13 @@ function formatDate(dateStr: string): string {
     <div class="section presets-section">
       <div class="section-header">
         <h2>Presets</h2>
-        <button class="btn-primary" @click="showNewPresetModal = true">
-          + Save Current as Preset
-        </button>
+        <div class="header-actions">
+          <button class="btn-secondary" @click="importData">Import</button>
+          <button class="btn-secondary" @click="exportData">Export</button>
+          <button class="btn-primary" @click="showNewPresetModal = true">
+            + Save as Preset
+          </button>
+        </div>
       </div>
 
       <div v-if="presets.length === 0" class="empty-presets">
@@ -334,6 +384,11 @@ function formatDate(dateStr: string): string {
 
 .section-header h2 {
   margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.5rem;
 }
 
 h2 {

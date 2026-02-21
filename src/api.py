@@ -205,6 +205,29 @@ async def delete_rating(food_name: str):
     raise HTTPException(status_code=404, detail="Rating not found")
 
 
+# === Import/Export Endpoints ===
+
+
+@app.get("/api/export")
+async def export_data():
+    """Export all ratings and presets for backup."""
+    storage = get_storage()
+    return {
+        "ratings": storage._load_ratings_raw(),
+        "active_preset": storage.get_active_preset(),
+    }
+
+
+@app.post("/api/import")
+async def import_data(data: dict):
+    """Import ratings from backup."""
+    storage = get_storage()
+    ratings = data.get("ratings", [])
+    if ratings:
+        storage._save_ratings_raw(ratings)
+    return {"status": "imported", "count": len(ratings)}
+
+
 # === Presets Endpoints ===
 
 
