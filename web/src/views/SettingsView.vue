@@ -137,6 +137,28 @@ function formatDate(dateStr: string): string {
   return date.toLocaleDateString()
 }
 
+// Sync to server (for Telegram bot)
+const syncing = ref(false)
+
+async function syncToServer() {
+  syncing.value = true
+  try {
+    // Push all ratings to server
+    const allRatings = exportRatings()
+    await fetch('/api/ratings/sync', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ratings: allRatings }),
+    })
+    alert(`Synced ${allRatings.length} ratings to server. Telegram bot will use these ratings.`)
+  } catch (e) {
+    console.error('Failed to sync:', e)
+    alert('Sync failed')
+  } finally {
+    syncing.value = false
+  }
+}
+
 // Import/Export (using localStorage)
 function exportData() {
   try {
@@ -192,8 +214,13 @@ function importData() {
         <div class="header-actions">
           <button class="btn-secondary" @click="importData">Import</button>
           <button class="btn-secondary" @click="exportData">Export</button>
-          <button class="btn-primary" @click="showNewPresetModal = true">
-            + Save as Preset
+          <button
+            class="btn-sync"
+            :disabled="syncing"
+            @click="syncToServer"
+            title="Sync ratings to server for Telegram bot"
+          >
+            {{ syncing ? 'Syncing...' : '↑ Sync to Server' }}
           </button>
         </div>
       </div>
@@ -562,6 +589,26 @@ h2 {
 
 .btn-secondary:hover {
   background: #e5e7eb;
+}
+
+.btn-sync {
+  padding: 0.5rem 1rem;
+  background: #dbeafe;
+  color: #1d4ed8;
+  border: 1px solid #93c5fd;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.btn-sync:hover:not(:disabled) {
+  background: #bfdbfe;
+}
+
+.btn-sync:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .stats {

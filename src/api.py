@@ -218,6 +218,24 @@ async def delete_rating(food_name: str):
     raise HTTPException(status_code=404, detail="Rating not found")
 
 
+class SyncRequest(BaseModel):
+    """Request body for syncing ratings from browser."""
+
+    ratings: list[dict]
+
+
+@app.post("/api/ratings/sync")
+async def sync_ratings(request: SyncRequest):
+    """Sync ratings from browser localStorage to server.
+
+    This replaces all server ratings with the provided ratings.
+    Used for Telegram bot to access browser ratings.
+    """
+    storage = get_storage()
+    storage._save_ratings_raw(request.ratings)
+    return {"status": "synced", "count": len(request.ratings)}
+
+
 # === Import/Export Endpoints ===
 
 
