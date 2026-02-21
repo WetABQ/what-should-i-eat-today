@@ -19,6 +19,8 @@ COPY src/ ./src/
 COPY config.yaml .
 COPY main.py .
 COPY bot.py .
+COPY start.sh .
+RUN chmod +x start.sh
 
 # Copy built frontend
 COPY --from=frontend /app/web/dist ./web/dist
@@ -29,4 +31,4 @@ RUN mkdir -p data/cache data/presets
 ENV PORT=8000
 EXPOSE 8000
 
-CMD uvicorn src.api:app --host 0.0.0.0 --port $PORT
+CMD ["./start.sh"]
