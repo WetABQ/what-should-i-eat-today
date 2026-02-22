@@ -20,10 +20,36 @@ class Storage:
         self.data_dir = data_dir or DATA_DIR
         self.ratings_file = self.data_dir / "ratings.json"
         self._ensure_data_dir()
+        self._load_default_preset_if_needed()
 
     def _ensure_data_dir(self) -> None:
         """Ensure the data directory exists."""
         self.data_dir.mkdir(parents=True, exist_ok=True)
+
+    def _load_default_preset_if_needed(self) -> None:
+        """Load default preset if no ratings exist."""
+        # Check if ratings file exists and has content
+        if self.ratings_file.exists():
+            try:
+                with open(self.ratings_file) as f:
+                    ratings = json.load(f)
+                if ratings:  # Has ratings, don't load default
+                    return
+            except json.JSONDecodeError:
+                pass
+
+        # Try to load default preset
+        default_preset = PRESETS_DIR / "default.json"
+        if default_preset.exists():
+            try:
+                with open(default_preset) as f:
+                    data = json.load(f)
+                ratings = data if isinstance(data, list) else data.get("ratings", [])
+                if ratings:
+                    self._save_ratings_raw(ratings)
+                    print(f"Loaded {len(ratings)} ratings from default preset")
+            except (json.JSONDecodeError, KeyError) as e:
+                print(f"Failed to load default preset: {e}")
 
     # === Ratings ===
 

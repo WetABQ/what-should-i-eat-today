@@ -39,7 +39,9 @@ env/
 data/*.json
 data/*.txt
 data/cache/
-data/presets/
+data/presets/*
+# Keep default preset for initial deployment
+!data/presets/default.json
 
 # Node.js (Vue frontend)
 web/node_modules/

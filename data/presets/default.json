@@ -1,0 +1,3523 @@
+[
+  {
+    "food_name": "Chicken Piece Seasoned Baked",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:49:54.735636",
+    "updated_at": "2026-02-20T17:49:54.735636"
+  },
+  {
+    "food_name": "Garbanzos w/ Tomato Sauce",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:49:59.202747",
+    "updated_at": "2026-02-20T17:49:59.202747"
+  },
+  {
+    "food_name": "Greek Cod",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:49:59.916395",
+    "updated_at": "2026-02-20T17:49:59.916395"
+  },
+  {
+    "food_name": "Corn O'Brien",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:50:01.805985",
+    "updated_at": "2026-02-20T17:50:01.805985"
+  },
+  {
+    "food_name": "Fresh Green Beans",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:50:02.535824",
+    "updated_at": "2026-02-20T17:50:02.535824"
+  },
+  {
+    "food_name": "Italian Barley (VN)",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:50:08.285130",
+    "updated_at": "2026-02-20T17:50:08.285130"
+  },
+  {
+    "food_name": "Baked Potato",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:50:36.185284",
+    "updated_at": "2026-02-20T17:50:36.185284"
+  },
+  {
+    "food_name": "Creamy Coleslaw (Veg)",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:50:42.346857",
+    "updated_at": "2026-02-20T17:50:42.346857"
+  },
+  {
+    "food_name": "Lemon Wedge",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:50:59.401378",
+    "updated_at": "2026-02-20T17:50:59.401378"
+  },
+  {
+    "food_name": "Tartar Sauce",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:52:13.211391",
+    "updated_at": "2026-02-20T17:52:13.211391"
+  },
+  {
+    "food_name": "Gluten Free Rotini",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:52:14.967979",
+    "updated_at": "2026-02-20T17:52:14.967979"
+  },
+  {
+    "food_name": "Homestyle Marinara Sauce",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:52:40.345070",
+    "updated_at": "2026-02-20T17:52:40.345070"
+  },
+  {
+    "food_name": "Pasta (VN)",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:52:41.688984",
+    "updated_at": "2026-02-20T17:52:41.688984"
+  },
+  {
+    "food_name": "Whole Grain Pasta (VN)",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:52:42.570543",
+    "updated_at": "2026-02-20T17:52:42.570543"
+  },
+  {
+    "food_name": "Zucchini Noodles",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:52:44.084874",
+    "updated_at": "2026-02-20T17:52:44.084874"
+  },
+  {
+    "food_name": "Pesto Alfredo Sauce (no pine nuts)",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:53:15.072345",
+    "updated_at": "2026-02-20T17:53:15.072345"
+  },
+  {
+    "food_name": "Sundried Tomato Mushroom Cheese Sauce",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:53:15.870384",
+    "updated_at": "2026-02-20T17:53:15.870384"
+  },
+  {
+    "food_name": "Beef & Chicken Meatballs",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:53:16.844733",
+    "updated_at": "2026-02-20T17:53:16.844733"
+  },
+  {
+    "food_name": "Clam Chowder",
+    "score": 8,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:53:24.535083",
+    "updated_at": "2026-02-20T17:57:57.102673"
+  },
+  {
+    "food_name": "Beef Taco Meat",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.053183",
+    "updated_at": "2026-02-20T17:54:22.053183"
+  },
+  {
+    "food_name": "Plant Based Protein Chicken Taco Filling",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.059543",
+    "updated_at": "2026-02-20T17:54:22.059543"
+  },
+  {
+    "food_name": "Beef Barbacoa",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.062547",
+    "updated_at": "2026-02-20T17:54:22.062547"
+  },
+  {
+    "food_name": "Spinach Enchiladas",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.066770",
+    "updated_at": "2026-02-20T17:54:22.066770"
+  },
+  {
+    "food_name": "Black Beans",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.069467",
+    "updated_at": "2026-02-20T17:54:22.069467"
+  },
+  {
+    "food_name": "Cilantro Lime White Rice",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.072725",
+    "updated_at": "2026-02-20T17:54:22.072725"
+  },
+  {
+    "food_name": "Mexicali Corn",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.076440",
+    "updated_at": "2026-02-20T17:54:22.076440"
+  },
+  {
+    "food_name": "Build Your Own Que Rico",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.078467",
+    "updated_at": "2026-02-20T17:54:22.078467"
+  },
+  {
+    "food_name": "Battered Cod",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.080873",
+    "updated_at": "2026-02-20T17:54:22.080873"
+  },
+  {
+    "food_name": "Lemon Pepper Cod Fillet",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.083071",
+    "updated_at": "2026-02-20T17:54:22.083071"
+  },
+  {
+    "food_name": "Crispy Tofu Bowl",
+    "score": 4,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.085062",
+    "updated_at": "2026-02-20T17:58:53.370747"
+  },
+  {
+    "food_name": "Straight Cut Fries",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.088356",
+    "updated_at": "2026-02-20T17:54:22.088356"
+  },
+  {
+    "food_name": "Glazed Baby Carrots",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.090635",
+    "updated_at": "2026-02-20T17:54:22.090635"
+  },
+  {
+    "food_name": "Green Beans",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.092530",
+    "updated_at": "2026-02-20T17:54:22.092530"
+  },
+  {
+    "food_name": "Exotic Grains & Fire Roasted Vegetables",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.094439",
+    "updated_at": "2026-02-20T17:54:22.094439"
+  },
+  {
+    "food_name": "Ham",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.096110",
+    "updated_at": "2026-02-20T17:54:22.096110"
+  },
+  {
+    "food_name": "Tempeh",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.099490",
+    "updated_at": "2026-02-20T17:54:22.099490"
+  },
+  {
+    "food_name": "Wheat Berries",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.101198",
+    "updated_at": "2026-02-20T17:54:22.101198"
+  },
+  {
+    "food_name": "Oatmeal (VN)",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.102708",
+    "updated_at": "2026-02-20T17:54:22.102708"
+  },
+  {
+    "food_name": "Dinner Roll",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.104446",
+    "updated_at": "2026-02-20T17:54:22.104446"
+  },
+  {
+    "food_name": "Melon Watermelon Whole Sliced",
+    "score": 4,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.106370",
+    "updated_at": "2026-02-20T17:58:47.084823"
+  },
+  {
+    "food_name": "Strawberry Greek Yogurt",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.109221",
+    "updated_at": "2026-02-20T17:54:22.109221"
+  },
+  {
+    "food_name": "Waffle with Compote & Whip Cream",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.110855",
+    "updated_at": "2026-02-20T17:54:22.110855"
+  },
+  {
+    "food_name": "Garbanzo Beans",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.112447",
+    "updated_at": "2026-02-20T17:54:22.112447"
+  },
+  {
+    "food_name": "Minestrone Soup",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.114569",
+    "updated_at": "2026-02-20T17:54:22.114569"
+  },
+  {
+    "food_name": "Cantaloupe Slices",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.116271",
+    "updated_at": "2026-02-20T17:54:22.116271"
+  },
+  {
+    "food_name": "Build Your Own Salad",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.119085",
+    "updated_at": "2026-02-20T17:54:22.119085"
+  },
+  {
+    "food_name": "Build Your Own Green Dragon Bowl",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.120705",
+    "updated_at": "2026-02-20T17:54:22.120705"
+  },
+  {
+    "food_name": "Build Your Own Yogurt Bar",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.122836",
+    "updated_at": "2026-02-20T17:54:22.122836"
+  },
+  {
+    "food_name": "Lemon Pepper Chicken Salad",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.124697",
+    "updated_at": "2026-02-20T17:54:22.124697"
+  },
+  {
+    "food_name": "Hummus Homemade Roasted Beet (VN)",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.126595",
+    "updated_at": "2026-02-20T17:54:22.126595"
+  },
+  {
+    "food_name": "Build Your Own Sandwich",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.129260",
+    "updated_at": "2026-02-20T17:54:22.129260"
+  },
+  {
+    "food_name": "Ice Cream",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.131205",
+    "updated_at": "2026-02-20T17:54:22.131205"
+  },
+  {
+    "food_name": "-Cupcake Strawberry White Chocolate",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.133221",
+    "updated_at": "2026-02-20T17:54:22.133221"
+  },
+  {
+    "food_name": "-Cookies & Cream Cupcake (VN)",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.134617",
+    "updated_at": "2026-02-20T17:54:22.134617"
+  },
+  {
+    "food_name": "Popcake Pancake",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.136123",
+    "updated_at": "2026-02-20T17:54:22.136123"
+  },
+  {
+    "food_name": "Double Chocolate Chip Cookie",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.138187",
+    "updated_at": "2026-02-20T17:54:22.138187"
+  },
+  {
+    "food_name": "Snickerdoodle Cookie",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T17:54:22.139771",
+    "updated_at": "2026-02-20T17:54:22.139771"
+  },
+  {
+    "food_name": "Crispy Chicken Sandwich",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-20T17:57:50.572753",
+    "updated_at": "2026-02-20T17:57:50.572753"
+  },
+  {
+    "food_name": "Lemon Grass Shrimp (AYCTE)",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-20T17:57:50.578834",
+    "updated_at": "2026-02-20T17:57:50.578834"
+  },
+  {
+    "food_name": "Beef Sirloin Tips",
+    "score": 4,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-20T17:57:50.582012",
+    "updated_at": "2026-02-20T17:58:15.915412"
+  },
+  {
+    "food_name": "Roasted Carrots (VN)",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-20T17:57:50.584201",
+    "updated_at": "2026-02-20T17:57:50.584201"
+  },
+  {
+    "food_name": "Long Grain Rice (VN)",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-20T17:57:50.586112",
+    "updated_at": "2026-02-20T17:57:50.586112"
+  },
+  {
+    "food_name": "BBQ Wing Sauce",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-20T17:57:50.588285",
+    "updated_at": "2026-02-20T17:57:50.588285"
+  },
+  {
+    "food_name": "Oven Poached Salmon",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-20T17:57:50.590538",
+    "updated_at": "2026-02-20T17:57:50.590538"
+  },
+  {
+    "food_name": "Wide Egg Noodles",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-20T17:57:50.592862",
+    "updated_at": "2026-02-20T17:57:50.592862"
+  },
+  {
+    "food_name": "Navarathan Korma (AYCTE)",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-20T17:57:50.594578",
+    "updated_at": "2026-02-20T17:57:50.594578"
+  },
+  {
+    "food_name": "Sugar Cookie",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-20T17:57:50.596789",
+    "updated_at": "2026-02-20T17:57:50.596789"
+  },
+  {
+    "food_name": "Sauteed Shrimp",
+    "score": 6,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:30.199956",
+    "updated_at": "2026-02-21T15:15:43.536600"
+  },
+  {
+    "food_name": "Cheese Stuffed Shells w/Sauce",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.017309",
+    "updated_at": "2026-02-20T17:59:33.017309"
+  },
+  {
+    "food_name": "Jackfruit Meatballs",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.021068",
+    "updated_at": "2026-02-20T17:59:33.021068"
+  },
+  {
+    "food_name": "Thin Crust Cheese Pizza",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.023535",
+    "updated_at": "2026-02-20T17:59:33.023535"
+  },
+  {
+    "food_name": "Thin Crust Tavern Style Spinach & Feta",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.026759",
+    "updated_at": "2026-02-20T17:59:33.026759"
+  },
+  {
+    "food_name": "Tavern Style Sausage Pizza (Pork)",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.029798",
+    "updated_at": "2026-02-20T17:59:33.029798"
+  },
+  {
+    "food_name": "Gluten Free Veggie Pizza Quarter",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.031913",
+    "updated_at": "2026-02-20T17:59:33.031913"
+  },
+  {
+    "food_name": "Scrambled Eggs",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.034656",
+    "updated_at": "2026-02-20T17:59:33.034656"
+  },
+  {
+    "food_name": "Scrambled Egg Whites",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.036139",
+    "updated_at": "2026-02-20T17:59:33.036139"
+  },
+  {
+    "food_name": "Egg (JUST) Scrambled",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.037873",
+    "updated_at": "2026-02-20T17:59:33.037873"
+  },
+  {
+    "food_name": "Made to Order Eggcetera Omelet",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.039508",
+    "updated_at": "2026-02-20T17:59:33.039508"
+  },
+  {
+    "food_name": "Make Your Own Waffle w/Fruit & Cream",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.041435",
+    "updated_at": "2026-02-20T17:59:33.041435"
+  },
+  {
+    "food_name": "Potato Oven Roasted Red Wedges",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.044424",
+    "updated_at": "2026-02-20T17:59:33.044424"
+  },
+  {
+    "food_name": "Bacon",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.045858",
+    "updated_at": "2026-02-20T17:59:33.045858"
+  },
+  {
+    "food_name": "Turkey Sausage Patties",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.047515",
+    "updated_at": "2026-02-20T17:59:33.047515"
+  },
+  {
+    "food_name": "Jackfruit Sausage Patty",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.049209",
+    "updated_at": "2026-02-20T17:59:33.049209"
+  },
+  {
+    "food_name": "Seasoned Curly Fries",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.051007",
+    "updated_at": "2026-02-20T17:59:33.051007"
+  },
+  {
+    "food_name": "Black Bean Burger (VN)",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.053530",
+    "updated_at": "2026-02-20T17:59:33.053530"
+  },
+  {
+    "food_name": "Tandoori Chicken",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.054902",
+    "updated_at": "2026-02-20T17:59:33.054902"
+  },
+  {
+    "food_name": "Black Eyed Pea Curry (AYCTE)",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.056654",
+    "updated_at": "2026-02-20T17:59:33.056654"
+  },
+  {
+    "food_name": "White Basmati Rice",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.058307",
+    "updated_at": "2026-02-20T17:59:33.058307"
+  },
+  {
+    "food_name": "Stonefire Naan Bread",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.060205",
+    "updated_at": "2026-02-20T17:59:33.060205"
+  },
+  {
+    "food_name": "Fajita Vegetables",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.062972",
+    "updated_at": "2026-02-20T17:59:33.062972"
+  },
+  {
+    "food_name": "Pinto Beans",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.064508",
+    "updated_at": "2026-02-20T17:59:33.064508"
+  },
+  {
+    "food_name": "Egg Salad Filling",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.066239",
+    "updated_at": "2026-02-20T17:59:33.066239"
+  },
+  {
+    "food_name": "Build Your Own Breakfast Sandwich",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.067800",
+    "updated_at": "2026-02-20T17:59:33.067800"
+  },
+  {
+    "food_name": "Firecracker Slaw",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.069306",
+    "updated_at": "2026-02-20T17:59:33.069306"
+  },
+  {
+    "food_name": "Asian Pickled Vegetables",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T17:59:33.071243",
+    "updated_at": "2026-02-20T17:59:33.071243"
+  },
+  {
+    "food_name": "Lamb Vindaloo",
+    "score": 6,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T17:59:39.279079",
+    "updated_at": "2026-02-20T17:59:45.185652"
+  },
+  {
+    "food_name": "Lemon Grass Tilapia",
+    "score": 4,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T17:59:55.460556",
+    "updated_at": "2026-02-20T17:59:55.460556"
+  },
+  {
+    "food_name": "Chicken Quesadilla",
+    "score": 4,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T17:59:58.684768",
+    "updated_at": "2026-02-20T17:59:58.684768"
+  },
+  {
+    "food_name": "Watermelon Slices",
+    "score": 4,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:15.444355",
+    "updated_at": "2026-02-20T18:00:15.444355"
+  },
+  {
+    "food_name": "Indian Style Chickpeas w/ Rice",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:18.792557",
+    "updated_at": "2026-02-20T18:00:18.792557"
+  },
+  {
+    "food_name": "Brown Basmati Rice",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:18.796641",
+    "updated_at": "2026-02-20T18:00:18.796641"
+  },
+  {
+    "food_name": "Elote Corn",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:18.800602",
+    "updated_at": "2026-02-20T18:00:18.800602"
+  },
+  {
+    "food_name": "Peas",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:18.803404",
+    "updated_at": "2026-02-20T18:00:18.803404"
+  },
+  {
+    "food_name": "Vegan Quesadilla",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:18.805952",
+    "updated_at": "2026-02-20T18:00:18.805952"
+  },
+  {
+    "food_name": "Buona Cucina Condiment",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:18.808660",
+    "updated_at": "2026-02-20T18:00:18.808660"
+  },
+  {
+    "food_name": "Riviera Vegetable Blend",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:18.811954",
+    "updated_at": "2026-02-21T15:52:00.978078"
+  },
+  {
+    "food_name": "Beef",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:18.813898",
+    "updated_at": "2026-02-20T18:00:18.813898"
+  },
+  {
+    "food_name": "Beyond Brat - No Bun",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:18.816347",
+    "updated_at": "2026-02-20T18:00:18.816347"
+  },
+  {
+    "food_name": "Homemade Alfredo Sauce",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:18.818368",
+    "updated_at": "2026-02-20T18:00:18.818368"
+  },
+  {
+    "food_name": "Lemon Dill Sauce",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:18.820216",
+    "updated_at": "2026-02-20T18:00:18.820216"
+  },
+  {
+    "food_name": "Vegan GF Roasted Vegetable Pizza",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:18.823303",
+    "updated_at": "2026-02-20T18:00:18.823303"
+  },
+  {
+    "food_name": "Hawaiian (Pork) Pizza Slice",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:18.825124",
+    "updated_at": "2026-02-20T18:00:18.825124"
+  },
+  {
+    "food_name": "Cheese Pizza Slice (Veg)",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:18.826961",
+    "updated_at": "2026-02-20T18:00:18.826961"
+  },
+  {
+    "food_name": "Build Your Own Poke Bar",
+    "score": 10,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:18.829048",
+    "updated_at": "2026-02-20T18:00:59.151810"
+  },
+  {
+    "food_name": "Station Recipe - Deli  AYCTE FLM",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:18.831258",
+    "updated_at": "2026-02-20T18:00:18.831258"
+  },
+  {
+    "food_name": "Tuna Salad",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:18.833991",
+    "updated_at": "2026-02-20T18:00:18.833991"
+  },
+  {
+    "food_name": "New Orleans Turkey Melt w/ Pork",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:29.012476",
+    "updated_at": "2026-02-20T18:00:29.012476"
+  },
+  {
+    "food_name": "Sand Jackfruit Burger",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:30.786515",
+    "updated_at": "2026-02-20T18:00:30.786515"
+  },
+  {
+    "food_name": "Veggie Focaccia Sandwich",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:34.581617",
+    "updated_at": "2026-02-20T18:00:34.581617"
+  },
+  {
+    "food_name": "Smoked Turkey",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:35.802115",
+    "updated_at": "2026-02-20T18:00:35.802115"
+  },
+  {
+    "food_name": "Mixed Vegetables",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:36.251966",
+    "updated_at": "2026-02-20T18:00:36.251966"
+  },
+  {
+    "food_name": "Broccoli w/ Cheese Sauce",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:36.801154",
+    "updated_at": "2026-02-20T18:00:36.801154"
+  },
+  {
+    "food_name": "Scalloped Potatoes",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:37.215154",
+    "updated_at": "2026-02-20T18:00:37.215154"
+  },
+  {
+    "food_name": "Vegan GF Roasted Vegetable Pizza Slice",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T18:00:37.778835",
+    "updated_at": "2026-02-20T18:00:37.778835"
+  },
+  {
+    "food_name": "Texas BBQ Sliced Beef Brisket",
+    "score": 10,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T18:01:22.031062",
+    "updated_at": "2026-02-20T18:01:22.031062"
+  },
+  {
+    "food_name": "Blackened Catfish",
+    "score": 4,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T18:01:24.804670",
+    "updated_at": "2026-02-20T18:01:24.804670"
+  },
+  {
+    "food_name": "Curry Mango - Tofu",
+    "score": 7,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T18:01:35.550921",
+    "updated_at": "2026-02-21T15:14:37.316288"
+  },
+  {
+    "food_name": "Tikka Masala Chicken",
+    "score": 7,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T18:01:39.433179",
+    "updated_at": "2026-02-21T15:14:35.586328"
+  },
+  {
+    "food_name": "Shredded Beef Flauta",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T18:01:52.048008",
+    "updated_at": "2026-02-20T18:01:52.048008"
+  },
+  {
+    "food_name": "Chicken and Cheese Flauta",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T18:01:53.036492",
+    "updated_at": "2026-02-20T18:01:53.036492"
+  },
+  {
+    "food_name": "Texas Corn Bread",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T18:01:54.885604",
+    "updated_at": "2026-02-20T18:01:54.885604"
+  },
+  {
+    "food_name": "Chili Bar",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T18:01:55.540850",
+    "updated_at": "2026-02-20T18:01:55.540850"
+  },
+  {
+    "food_name": "California Veggie Stir Fry",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T18:02:06.989805",
+    "updated_at": "2026-02-20T18:02:06.989805"
+  },
+  {
+    "food_name": "Broccoli, Cauliflower & Carrots",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T18:02:06.992369",
+    "updated_at": "2026-02-20T18:02:06.992369"
+  },
+  {
+    "food_name": "Jasmine Rice (VN)",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T18:02:06.995598",
+    "updated_at": "2026-02-20T18:02:06.995598"
+  },
+  {
+    "food_name": "Cracked Bulgur Wheat",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T18:02:06.997866",
+    "updated_at": "2026-02-20T18:02:06.997866"
+  },
+  {
+    "food_name": "Lasagna Cheese Rollup (Veg)",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T18:02:07.000180",
+    "updated_at": "2026-02-20T18:02:07.000180"
+  },
+  {
+    "food_name": "Build Your Own Chili Bar",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T18:02:07.002081",
+    "updated_at": "2026-02-20T18:02:07.002081"
+  },
+  {
+    "food_name": "Fired Up Condiment",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T18:02:07.003740",
+    "updated_at": "2026-02-20T18:02:07.003740"
+  },
+  {
+    "food_name": "Petite Fish Sandwich",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T18:02:07.006113",
+    "updated_at": "2026-02-20T18:02:07.006113"
+  },
+  {
+    "food_name": "Vegan Fish Sandwich",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-20T18:02:07.007661",
+    "updated_at": "2026-02-20T18:02:07.007661"
+  },
+  {
+    "food_name": "Beef Masaman Thai Curry",
+    "score": 6,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T18:02:14.112483",
+    "updated_at": "2026-02-20T18:02:19.840733"
+  },
+  {
+    "food_name": "Coconut Tofu w/Red Curry Sauce",
+    "score": 6,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T18:02:17.416533",
+    "updated_at": "2026-02-20T18:02:19.053660"
+  },
+  {
+    "food_name": "Miso Glazed Salmon",
+    "score": 6,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T18:02:25.354491",
+    "updated_at": "2026-02-20T18:02:26.202410"
+  },
+  {
+    "food_name": "Normandy Vegetable Blend",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T18:02:28.376072",
+    "updated_at": "2026-02-20T18:02:28.376072"
+  },
+  {
+    "food_name": "Pancakes (1)",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T18:02:29.235704",
+    "updated_at": "2026-02-20T18:02:29.235704"
+  },
+  {
+    "food_name": "Hashbrown Patty",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T18:02:30.895456",
+    "updated_at": "2026-02-20T18:02:30.895456"
+  },
+  {
+    "food_name": "Sausage Links Chicken (halal) (AYCTE)",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T18:02:43.285295",
+    "updated_at": "2026-02-20T18:02:43.285295"
+  },
+  {
+    "food_name": "Pancake Bar Condiment Station",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-20T18:02:43.287687",
+    "updated_at": "2026-02-20T18:02:43.287687"
+  },
+  {
+    "food_name": "Baked Lemon Butter Cod",
+    "score": 4,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-20T18:02:50.399553",
+    "updated_at": "2026-02-20T18:02:50.399553"
+  },
+  {
+    "food_name": "Pork Carnita",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-20T18:02:56.475243",
+    "updated_at": "2026-02-20T18:02:56.475243"
+  },
+  {
+    "food_name": "Popcorn Chicken",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-20T18:02:56.478006",
+    "updated_at": "2026-02-20T18:02:56.478006"
+  },
+  {
+    "food_name": "Broccoli Florets (VN)",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-20T18:02:56.481408",
+    "updated_at": "2026-02-20T18:02:56.481408"
+  },
+  {
+    "food_name": "Pan Seared Cabbage",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-20T18:02:56.484923",
+    "updated_at": "2026-02-20T18:02:56.484923"
+  },
+  {
+    "food_name": "Homestyle Mac & Cheese",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-20T18:02:56.487162",
+    "updated_at": "2026-02-20T18:02:56.487162"
+  },
+  {
+    "food_name": "Baked Tilapia w/Dill Wine Sauce",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-20T18:02:56.489180",
+    "updated_at": "2026-02-20T18:02:56.489180"
+  },
+  {
+    "food_name": "Green Bean and Onion Tian",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-20T18:02:56.492476",
+    "updated_at": "2026-02-20T18:02:56.492476"
+  },
+  {
+    "food_name": "Acorn Squash",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-20T18:02:56.494387",
+    "updated_at": "2026-02-20T18:02:56.494387"
+  },
+  {
+    "food_name": "Red Beans & Rice",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-20T18:02:56.496716",
+    "updated_at": "2026-02-20T18:02:56.496716"
+  },
+  {
+    "food_name": "Asparagus w/ Lemon",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-20T18:02:56.498848",
+    "updated_at": "2026-02-20T18:02:56.498848"
+  },
+  {
+    "food_name": "Burnt Ends",
+    "score": 10,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:03:02.558420",
+    "updated_at": "2026-02-20T18:03:02.558420"
+  },
+  {
+    "food_name": "Bibimbap Beef",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:03:18.053078",
+    "updated_at": "2026-02-20T18:03:39.399070"
+  },
+  {
+    "food_name": "Bibimbap Bowl",
+    "score": 10,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:03:19.571441",
+    "updated_at": "2026-02-20T18:03:19.571441"
+  },
+  {
+    "food_name": "Bibimbap Tofu",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:03:22.135133",
+    "updated_at": "2026-02-20T18:03:40.186010"
+  },
+  {
+    "food_name": "Green Onions",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:03:28.924197",
+    "updated_at": "2026-02-20T18:03:28.924197"
+  },
+  {
+    "food_name": "Bibimbap Sauce",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:03:30.121698",
+    "updated_at": "2026-02-20T18:03:30.121698"
+  },
+  {
+    "food_name": "Vegan Kimchee",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:03:30.998338",
+    "updated_at": "2026-02-20T18:03:30.998338"
+  },
+  {
+    "food_name": "Bibimbap Bowl  Veggies",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:03:31.461928",
+    "updated_at": "2026-02-20T18:03:31.461928"
+  },
+  {
+    "food_name": "Sushi Rice",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:03:38.127270",
+    "updated_at": "2026-02-20T18:03:38.127270"
+  },
+  {
+    "food_name": "Blackened Tilapia",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:03:53.973542",
+    "updated_at": "2026-02-20T18:03:53.973542"
+  },
+  {
+    "food_name": "Stuffed Green Peppers",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:03:53.978357",
+    "updated_at": "2026-02-20T18:03:53.978357"
+  },
+  {
+    "food_name": "Corn & Okra",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:03:53.981428",
+    "updated_at": "2026-02-20T18:03:53.981428"
+  },
+  {
+    "food_name": "Rosemary Roasted Red Potato Wedges (VN)",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:03:53.985934",
+    "updated_at": "2026-02-20T18:03:53.985934"
+  },
+  {
+    "food_name": "Italian Roasted Normandy Vegetables",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:03:53.988391",
+    "updated_at": "2026-02-20T18:03:53.988391"
+  },
+  {
+    "food_name": "Diced Chicken Breast",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:03:53.991120",
+    "updated_at": "2026-02-20T18:03:53.991120"
+  },
+  {
+    "food_name": "Tomato Cream Sauce",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:03:53.994321",
+    "updated_at": "2026-02-20T18:03:53.994321"
+  },
+  {
+    "food_name": "Cajun Alfredo Sauce",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:03:53.996448",
+    "updated_at": "2026-02-20T18:03:53.996448"
+  },
+  {
+    "food_name": "Vegan GF Roasted Vegetable Pizza Quarter",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:03:53.999429",
+    "updated_at": "2026-02-20T18:03:53.999429"
+  },
+  {
+    "food_name": "Thin Crust Tavern Style Margarita Pizza",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:03:54.001711",
+    "updated_at": "2026-02-20T18:03:54.001711"
+  },
+  {
+    "food_name": "Shrimp Po-Boy Sandwich",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:03:54.003693",
+    "updated_at": "2026-02-20T18:03:54.003693"
+  },
+  {
+    "food_name": "Vegan Hot Dog",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:03:54.005704",
+    "updated_at": "2026-02-20T18:03:54.005704"
+  },
+  {
+    "food_name": "Baked BBQ Chicken",
+    "score": 4,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:11:47.804830",
+    "updated_at": "2026-02-20T18:11:47.804830"
+  },
+  {
+    "food_name": "Blackened Salmon",
+    "score": 4,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:11:49.388916",
+    "updated_at": "2026-02-20T18:11:49.388916"
+  },
+  {
+    "food_name": "BBQ Seitan (VN)",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:11:51.018138",
+    "updated_at": "2026-02-20T18:11:51.018138"
+  },
+  {
+    "food_name": "Sauteed Collard Greens",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:11:51.800593",
+    "updated_at": "2026-02-20T18:11:51.800593"
+  },
+  {
+    "food_name": "Ancient Grains & Kale Blend",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:11:52.518806",
+    "updated_at": "2026-02-20T18:11:52.518806"
+  },
+  {
+    "food_name": "Baked Potato (VN)",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:11:53.218203",
+    "updated_at": "2026-02-20T18:11:53.218203"
+  },
+  {
+    "food_name": "Fajita Chicken",
+    "score": 4,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:11:59.070329",
+    "updated_at": "2026-02-20T18:11:59.070329"
+  },
+  {
+    "food_name": "Yakisoba w/Tofu",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:12:00.723071",
+    "updated_at": "2026-02-20T18:13:15.401080"
+  },
+  {
+    "food_name": "Pork Miso w/Yakisoba Noodles",
+    "score": 6,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:12:05.899597",
+    "updated_at": "2026-02-20T18:12:05.899597"
+  },
+  {
+    "food_name": "Pork Bratwurst Sandwich",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:12:09.530427",
+    "updated_at": "2026-02-20T18:12:09.530427"
+  },
+  {
+    "food_name": "Beyond Brat (VN)",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:12:09.535123",
+    "updated_at": "2026-02-20T18:12:09.535123"
+  },
+  {
+    "food_name": "Turkey Barbacoa (Heated)",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-20T18:12:09.539854",
+    "updated_at": "2026-02-20T18:12:09.539854"
+  },
+  {
+    "food_name": "General Tso's Chicken",
+    "score": 7,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:17:59.178701",
+    "updated_at": "2026-02-21T15:16:14.134977"
+  },
+  {
+    "food_name": "Vegetable Lo Mein Stir Fry",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:04.063736",
+    "updated_at": "2026-02-20T19:18:05.823849"
+  },
+  {
+    "food_name": "Vegetable Egg Roll",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:04.746103",
+    "updated_at": "2026-02-20T19:18:06.965193"
+  },
+  {
+    "food_name": "Chicken Tenders Breaded",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.236328",
+    "updated_at": "2026-02-20T19:18:21.236328"
+  },
+  {
+    "food_name": "Plant-Based Chicken Nuggets (6)",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.243822",
+    "updated_at": "2026-02-20T19:18:21.243822"
+  },
+  {
+    "food_name": "Bucky Fry Sauce - Unit",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.248381",
+    "updated_at": "2026-02-20T19:18:21.248381"
+  },
+  {
+    "food_name": "Cheese Jumbo Ravioli Plain",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.250960",
+    "updated_at": "2026-02-20T19:18:21.250960"
+  },
+  {
+    "food_name": "Garlic Roll",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.254294",
+    "updated_at": "2026-02-20T19:18:21.254294"
+  },
+  {
+    "food_name": "Giardiniera Chicken",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.256426",
+    "updated_at": "2026-02-20T19:18:21.256426"
+  },
+  {
+    "food_name": "Noodles Lo Mein (VN)",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.260366",
+    "updated_at": "2026-02-20T19:18:21.260366"
+  },
+  {
+    "food_name": "Taco Chicken",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.263413",
+    "updated_at": "2026-02-20T19:18:21.263413"
+  },
+  {
+    "food_name": "Vegan Chorizo Crumbles",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.266018",
+    "updated_at": "2026-02-20T19:18:21.266018"
+  },
+  {
+    "food_name": "Spanish Rice",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.268582",
+    "updated_at": "2026-02-20T19:18:21.268582"
+  },
+  {
+    "food_name": "Salad Corn & Black Bean Salsa",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.271141",
+    "updated_at": "2026-02-20T19:18:21.271141"
+  },
+  {
+    "food_name": "-Marble Cake w/Chocolate Frosting",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.274835",
+    "updated_at": "2026-02-20T19:18:21.274835"
+  },
+  {
+    "food_name": "Peach Crumb Bar",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.276949",
+    "updated_at": "2026-02-20T19:18:21.276949"
+  },
+  {
+    "food_name": "Assorted Donuts",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.279650",
+    "updated_at": "2026-02-20T19:18:21.279650"
+  },
+  {
+    "food_name": "Muffin Mini Blueberry",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.281569",
+    "updated_at": "2026-02-20T19:18:21.281569"
+  },
+  {
+    "food_name": "Muffin Mini Double Chocolate",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.283557",
+    "updated_at": "2026-02-20T19:18:21.283557"
+  },
+  {
+    "food_name": "Cookie Chocolate Chip",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.286644",
+    "updated_at": "2026-02-20T19:18:21.286644"
+  },
+  {
+    "food_name": "Cubed Seitan",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.288223",
+    "updated_at": "2026-02-20T19:18:21.288223"
+  },
+  {
+    "food_name": "Couscous",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.290231",
+    "updated_at": "2026-02-20T19:18:21.290231"
+  },
+  {
+    "food_name": "Edamame",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.292154",
+    "updated_at": "2026-02-20T19:18:21.292154"
+  },
+  {
+    "food_name": "Orange",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.294381",
+    "updated_at": "2026-02-20T19:18:21.294381"
+  },
+  {
+    "food_name": "Yogurt Greek Peach Odyssey",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.296921",
+    "updated_at": "2026-02-20T19:18:21.296921"
+  },
+  {
+    "food_name": "Pineapple Slices",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.298551",
+    "updated_at": "2026-02-20T19:18:21.298551"
+  },
+  {
+    "food_name": "Three Bean Chili",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.300148",
+    "updated_at": "2026-02-20T19:18:21.300148"
+  },
+  {
+    "food_name": "Kale, Sausage & Potato Soup",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-20T19:18:21.301883",
+    "updated_at": "2026-02-20T19:18:21.301883"
+  },
+  {
+    "food_name": "Feta & Spinach Quiche",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:10:35.850804",
+    "updated_at": "2026-02-21T15:10:35.850804"
+  },
+  {
+    "food_name": "Vegan Blackened Veggie Wrap",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:10:36.436741",
+    "updated_at": "2026-02-21T15:10:36.436741"
+  },
+  {
+    "food_name": "Potato Rounds",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:10:37.177642",
+    "updated_at": "2026-02-21T15:10:37.177642"
+  },
+  {
+    "food_name": "Coconut Shrimp",
+    "score": 7,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:10:58.199652",
+    "updated_at": "2026-02-21T15:52:00.973481"
+  },
+  {
+    "food_name": "Beef Tri Tip Carved w/ Chimichurri",
+    "score": 8,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:11:03.746673",
+    "updated_at": "2026-02-21T15:55:27.733915"
+  },
+  {
+    "food_name": "Spicy Tofu & Mushroom Sauce",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:11:08.127009",
+    "updated_at": "2026-02-21T15:52:00.975744"
+  },
+  {
+    "food_name": "Quinoa Pilaf",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:11:09.059715",
+    "updated_at": "2026-02-21T15:11:09.059715"
+  },
+  {
+    "food_name": "Cocktail Sauce",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:11:10.219988",
+    "updated_at": "2026-02-21T15:11:11.167700"
+  },
+  {
+    "food_name": "Butternut Squash Noodles",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:11:26.024443",
+    "updated_at": "2026-02-21T15:11:26.024443"
+  },
+  {
+    "food_name": "Italian Meat Sauce",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:11:26.042345",
+    "updated_at": "2026-02-21T15:11:26.042345"
+  },
+  {
+    "food_name": "Italian Pork Sausage",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:11:26.053103",
+    "updated_at": "2026-02-21T15:11:26.053103"
+  },
+  {
+    "food_name": "Pepperoni Pizza Slice",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:11:26.055978",
+    "updated_at": "2026-02-21T15:11:26.055978"
+  },
+  {
+    "food_name": "Pizza Slice Sausage",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:11:26.058779",
+    "updated_at": "2026-02-21T15:11:26.058779"
+  },
+  {
+    "food_name": "Gluten Free Pepperoni Pizza Quarter",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:11:26.061276",
+    "updated_at": "2026-02-21T15:11:26.061276"
+  },
+  {
+    "food_name": "Lamb & Beef Gyro Sandwich",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:11:26.064237",
+    "updated_at": "2026-02-21T15:11:26.064237"
+  },
+  {
+    "food_name": "Vegan French Dip Sandwich",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:11:26.067353",
+    "updated_at": "2026-02-21T15:11:26.067353"
+  },
+  {
+    "food_name": "Crinkle Cut French Fries",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:11:26.069354",
+    "updated_at": "2026-02-21T15:11:26.069354"
+  },
+  {
+    "food_name": "Chicken Tinga",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:11:26.073299",
+    "updated_at": "2026-02-21T15:11:26.073299"
+  },
+  {
+    "food_name": "Refried Beans",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:11:26.075458",
+    "updated_at": "2026-02-21T15:11:26.075458"
+  },
+  {
+    "food_name": "Chocolate Ice Cream (Soft Serve)",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:11:26.078022",
+    "updated_at": "2026-02-21T15:11:26.078022"
+  },
+  {
+    "food_name": "Strawberry Ice Cream",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:11:26.081382",
+    "updated_at": "2026-02-21T15:11:26.081382"
+  },
+  {
+    "food_name": "Tofu",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:11:26.083567",
+    "updated_at": "2026-02-21T15:11:26.083567"
+  },
+  {
+    "food_name": "Scrambled Tofu (VN)",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:11:26.085649",
+    "updated_at": "2026-02-21T15:11:26.085649"
+  },
+  {
+    "food_name": "Hard Cooked Egg",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:11:26.087571",
+    "updated_at": "2026-02-21T15:11:26.087571"
+  },
+  {
+    "food_name": "Hashbrown Patty (2)",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:11:26.089737",
+    "updated_at": "2026-02-21T15:11:26.089737"
+  },
+  {
+    "food_name": "Blueberry Pancakes (2)",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:11:53.110163",
+    "updated_at": "2026-02-21T15:11:53.110163"
+  },
+  {
+    "food_name": "Redstone Breakfast Potatoes",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:11:53.114754",
+    "updated_at": "2026-02-21T15:11:53.114754"
+  },
+  {
+    "food_name": "Andouille Sausage",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:11:53.117234",
+    "updated_at": "2026-02-21T15:11:53.117234"
+  },
+  {
+    "food_name": "Porridge Mahnomin Wild Rice- No Nut",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:11:53.119360",
+    "updated_at": "2026-02-21T15:11:53.119360"
+  },
+  {
+    "food_name": "Spicy Crispy Chicken Sandwich",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:11:53.121388",
+    "updated_at": "2026-02-21T15:11:53.121388"
+  },
+  {
+    "food_name": "Redstone Potatoes",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:11:53.123870",
+    "updated_at": "2026-02-21T15:11:53.123870"
+  },
+  {
+    "food_name": "Chocolate Chip Cookie (VN)",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:11:53.126887",
+    "updated_at": "2026-02-21T15:11:53.126887"
+  },
+  {
+    "food_name": "Shrimp Creole",
+    "score": 4,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:13:26.339935",
+    "updated_at": "2026-02-21T15:13:26.339935"
+  },
+  {
+    "food_name": "Chicken and Pork Sausage Gumbo",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:13:42.450306",
+    "updated_at": "2026-02-21T15:13:42.450306"
+  },
+  {
+    "food_name": "Zucchini & Squash Saute",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:13:42.460009",
+    "updated_at": "2026-02-21T15:13:42.460009"
+  },
+  {
+    "food_name": "Caribbean Vegetable Blend",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:13:42.463563",
+    "updated_at": "2026-02-21T15:13:42.463563"
+  },
+  {
+    "food_name": "Sweet Potato Baked",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:13:42.466958",
+    "updated_at": "2026-02-21T15:13:42.466958"
+  },
+  {
+    "food_name": "Vegan Grilled BBQ Chick'n Sandwich",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:13:42.469221",
+    "updated_at": "2026-02-21T15:13:42.469221"
+  },
+  {
+    "food_name": "Vegetable Creole (VN)",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:13:42.472328",
+    "updated_at": "2026-02-21T15:13:42.472328"
+  },
+  {
+    "food_name": "Crispy Chik'n Orange Wrap (VN)",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:13:59.515029",
+    "updated_at": "2026-02-21T15:13:59.515029"
+  },
+  {
+    "food_name": "Tofu & Broccoli Stir Fry",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:13:59.523323",
+    "updated_at": "2026-02-21T15:13:59.523323"
+  },
+  {
+    "food_name": "Sugar Snap Peas (VN)",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:13:59.527576",
+    "updated_at": "2026-02-21T15:13:59.527576"
+  },
+  {
+    "food_name": "Gluten Free Cheese Pizza Quarter",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:14:31.758378",
+    "updated_at": "2026-02-21T15:14:33.106070"
+  },
+  {
+    "food_name": "Quinoa",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:17:01.491869",
+    "updated_at": "2026-02-21T15:17:01.491869"
+  },
+  {
+    "food_name": "Honeydew Melon Slices",
+    "score": 6,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:17:07.224374",
+    "updated_at": "2026-02-21T15:17:07.224374"
+  },
+  {
+    "food_name": "Roasted Turkey Breast",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:17:31.686342",
+    "updated_at": "2026-02-21T15:17:31.686342"
+  },
+  {
+    "food_name": "Turkey Gravy",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:17:31.693930",
+    "updated_at": "2026-02-21T15:17:31.693930"
+  },
+  {
+    "food_name": "Biscuits & Pork Gravy",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:17:31.698183",
+    "updated_at": "2026-02-21T15:17:31.698183"
+  },
+  {
+    "food_name": "Tofu Brown Rice & Veggies",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:17:31.701291",
+    "updated_at": "2026-02-21T15:17:31.701291"
+  },
+  {
+    "food_name": "Corn",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:17:31.704013",
+    "updated_at": "2026-02-21T15:17:31.704013"
+  },
+  {
+    "food_name": "Wild Rice & Cranberry Pilaf (VN)",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:17:31.706489",
+    "updated_at": "2026-02-21T15:17:31.706489"
+  },
+  {
+    "food_name": "Baby Baker Potatoes",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:17:31.710381",
+    "updated_at": "2026-02-21T15:17:31.710381"
+  },
+  {
+    "food_name": "Hawaiian Roll",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:17:31.712496",
+    "updated_at": "2026-02-21T15:17:31.712496"
+  },
+  {
+    "food_name": "Gluten Free Rotini (VN)",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:17:31.714728",
+    "updated_at": "2026-02-21T15:17:31.714728"
+  },
+  {
+    "food_name": "Vegan Taco Filling",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:17:31.716843",
+    "updated_at": "2026-02-21T15:17:31.716843"
+  },
+  {
+    "food_name": "Crispy Buffalo Chik'n Sandwich (VN)",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:17:31.719106",
+    "updated_at": "2026-02-21T15:17:31.719106"
+  },
+  {
+    "food_name": "Crispy Buffalo Chicken Sandwich",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:17:31.722379",
+    "updated_at": "2026-02-21T15:17:31.722379"
+  },
+  {
+    "food_name": "Oatmeal Raisin Cookie",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:17:31.724526",
+    "updated_at": "2026-02-21T15:17:31.724526"
+  },
+  {
+    "food_name": "Garbanzo Beans (VN)",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:17:31.726279",
+    "updated_at": "2026-02-21T15:17:31.726279"
+  },
+  {
+    "food_name": "Fruit Grapes Whole",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:17:31.728036",
+    "updated_at": "2026-02-21T15:17:31.728036"
+  },
+  {
+    "food_name": "Garden Vegetable Soup",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:17:31.730012",
+    "updated_at": "2026-02-21T15:17:31.730012"
+  },
+  {
+    "food_name": "Chicken Chili",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:17:31.732618",
+    "updated_at": "2026-02-21T15:17:31.732618"
+  },
+  {
+    "food_name": "Yukon Gold Mashed Potatoes",
+    "score": 8,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:17:43.022578",
+    "updated_at": "2026-02-21T15:17:43.022578"
+  },
+  {
+    "food_name": "Polish Combo Blended Cheeseburger (Pork)",
+    "score": 4,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:17:53.808843",
+    "updated_at": "2026-02-21T15:17:53.808843"
+  },
+  {
+    "food_name": "Caribbean Cod",
+    "score": 4,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:17:58.661457",
+    "updated_at": "2026-02-21T15:17:58.661457"
+  },
+  {
+    "food_name": "Plant Based Chicken Strips",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:18:10.328930",
+    "updated_at": "2026-02-21T15:18:10.328930"
+  },
+  {
+    "food_name": "Vegan Fired Up Burger",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:18:10.333763",
+    "updated_at": "2026-02-21T15:18:10.333763"
+  },
+  {
+    "food_name": "Sauce - Sun Dried Tomato Alfredo",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:18:10.338422",
+    "updated_at": "2026-02-21T15:18:10.338422"
+  },
+  {
+    "food_name": "Chana Saag w/ Tofu",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:18:10.342117",
+    "updated_at": "2026-02-21T15:18:10.342117"
+  },
+  {
+    "food_name": "Southwest Jackfruit",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:18:10.344556",
+    "updated_at": "2026-02-21T15:18:10.344556"
+  },
+  {
+    "food_name": "Orange Sweet & Spicy Chicken",
+    "score": 6,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:18:44.908136",
+    "updated_at": "2026-02-21T15:18:44.908136"
+  },
+  {
+    "food_name": "Appetizer -  Fried Pork Potstickers",
+    "score": 7,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:18:47.730279",
+    "updated_at": "2026-02-21T15:18:47.730279"
+  },
+  {
+    "food_name": "Dal Nirvana",
+    "score": 4,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:19:06.590619",
+    "updated_at": "2026-02-21T15:19:06.590619"
+  },
+  {
+    "food_name": "Build Your Own Thali Station",
+    "score": 8,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:19:13.798514",
+    "updated_at": "2026-02-21T15:19:22.891654"
+  },
+  {
+    "food_name": "California Roll  (FujiSan)",
+    "score": 7,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:19:29.116746",
+    "updated_at": "2026-02-21T15:19:29.116746"
+  },
+  {
+    "food_name": "Cucumber Avocado Roll (FujiSan)",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:19:30.986594",
+    "updated_at": "2026-02-21T15:19:33.709853"
+  },
+  {
+    "food_name": "Tempura Roll (FujiSan)",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:19:34.744606",
+    "updated_at": "2026-02-21T15:19:34.744606"
+  },
+  {
+    "food_name": "-Coconut Rice Pudding",
+    "score": 7,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:19:39.125088",
+    "updated_at": "2026-02-21T15:19:39.125088"
+  },
+  {
+    "food_name": "Beyond Burger (VN)",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:19:48.603361",
+    "updated_at": "2026-02-21T15:19:48.603361"
+  },
+  {
+    "food_name": "Portabella Mushroom Ravioli Plain",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:19:48.610705",
+    "updated_at": "2026-02-21T15:19:48.610705"
+  },
+  {
+    "food_name": "Putenesca Sauce",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:19:48.614051",
+    "updated_at": "2026-02-21T15:19:48.614051"
+  },
+  {
+    "food_name": "Vegetable Fried Potstickers",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:19:48.617904",
+    "updated_at": "2026-02-21T15:19:48.617904"
+  },
+  {
+    "food_name": "Fried White Rice (Veg)",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:19:48.620913",
+    "updated_at": "2026-02-21T15:19:48.620913"
+  },
+  {
+    "food_name": "Oyster Sauce Glazed Vegetables",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:19:48.623693",
+    "updated_at": "2026-02-21T15:19:48.623693"
+  },
+  {
+    "food_name": "Chicken Curry",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:19:48.627233",
+    "updated_at": "2026-02-21T15:19:48.627233"
+  },
+  {
+    "food_name": "Samosas",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:19:48.629080",
+    "updated_at": "2026-02-21T15:19:48.629080"
+  },
+  {
+    "food_name": "Curry Potatoes",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:19:48.631477",
+    "updated_at": "2026-02-21T15:19:48.631477"
+  },
+  {
+    "food_name": "Grasshopper Brownie",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:19:48.634227",
+    "updated_at": "2026-02-21T15:19:48.634227"
+  },
+  {
+    "food_name": "Cookie M&M",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:19:48.636928",
+    "updated_at": "2026-02-21T15:19:48.636928"
+  },
+  {
+    "food_name": "Homemade Hummus",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:19:48.640608",
+    "updated_at": "2026-02-21T15:19:48.640608"
+  },
+  {
+    "food_name": "Diced Chicken",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:19:48.642627",
+    "updated_at": "2026-02-21T15:19:48.642627"
+  },
+  {
+    "food_name": "Bulgar Wheat",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:19:48.644849",
+    "updated_at": "2026-02-21T15:19:48.644849"
+  },
+  {
+    "food_name": "Broccoli Cheese Soup",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:19:48.646915",
+    "updated_at": "2026-02-21T15:19:48.646915"
+  },
+  {
+    "food_name": "Lemon Chicken Rice Soup",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:19:48.648896",
+    "updated_at": "2026-02-21T15:19:48.648896"
+  },
+  {
+    "food_name": "Leg of Lamb",
+    "score": 10,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:19:56.675481",
+    "updated_at": "2026-02-21T15:19:56.675481"
+  },
+  {
+    "food_name": "Build Your Own Stir Fry",
+    "score": 10,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:20:01.114837",
+    "updated_at": "2026-02-21T15:20:01.114837"
+  },
+  {
+    "food_name": "Beef Goulash w/Egg Noodles",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:20:23.765324",
+    "updated_at": "2026-02-21T15:20:23.765324"
+  },
+  {
+    "food_name": "Portobello Mushroom Stroganoff",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:20:23.771350",
+    "updated_at": "2026-02-21T15:20:23.771350"
+  },
+  {
+    "food_name": "Sweet Potato Noodles",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:20:23.778746",
+    "updated_at": "2026-02-21T15:20:23.778746"
+  },
+  {
+    "food_name": "Sage Cream Sauce",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:20:23.783201",
+    "updated_at": "2026-02-21T15:20:23.783201"
+  },
+  {
+    "food_name": "Loaded Potato Bacon (Pork) Pizza Slice",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:20:23.787791",
+    "updated_at": "2026-02-21T15:20:23.787791"
+  },
+  {
+    "food_name": "Chili Relleno with Oaxaca Cheese",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:20:23.790841",
+    "updated_at": "2026-02-21T15:20:23.790841"
+  },
+  {
+    "food_name": "Empanada Beef Picadillo",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:20:23.793810",
+    "updated_at": "2026-02-21T15:20:23.793810"
+  },
+  {
+    "food_name": "Poulet Braise",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:20:23.798036",
+    "updated_at": "2026-02-21T15:20:23.798036"
+  },
+  {
+    "food_name": "Tomato, Cucumber & Red Onion Salad",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:20:23.800217",
+    "updated_at": "2026-02-21T15:20:23.800217"
+  },
+  {
+    "food_name": "Jollof Rice - 25",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:20:23.802470",
+    "updated_at": "2026-02-21T15:20:23.802470"
+  },
+  {
+    "food_name": "Vanilla Ice Cream (Soft Serve)",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:20:23.805117",
+    "updated_at": "2026-02-21T15:20:23.805117"
+  },
+  {
+    "food_name": "Lemon Pepper Tuna Salad",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:20:23.807823",
+    "updated_at": "2026-02-21T15:20:23.807823"
+  },
+  {
+    "food_name": "Asparagus Tips",
+    "score": 4,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:20:31.039981",
+    "updated_at": "2026-02-21T15:20:31.039981"
+  },
+  {
+    "food_name": "Build Your Own Noodle Bowl",
+    "score": 10,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:20:36.319994",
+    "updated_at": "2026-02-21T15:20:36.319994"
+  },
+  {
+    "food_name": "Potsticker Edamame",
+    "score": 7,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:20:51.075030",
+    "updated_at": "2026-02-21T15:20:51.075030"
+  },
+  {
+    "food_name": "Grilled Chicken Pesto Artichoke Sandwich",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:20:53.799970",
+    "updated_at": "2026-02-21T15:20:53.799970"
+  },
+  {
+    "food_name": "Sauteed Eggplant",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:20:53.804609",
+    "updated_at": "2026-02-21T15:20:53.804609"
+  },
+  {
+    "food_name": "BYO - MTO Maki Noodle Bowl - Liz",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:20:53.811169",
+    "updated_at": "2026-02-21T15:20:53.811169"
+  },
+  {
+    "food_name": "Corned Beef",
+    "score": 4,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:21:02.266292",
+    "updated_at": "2026-02-21T15:21:02.266292"
+  },
+  {
+    "food_name": "Roast Turkey (halal)",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:21:06.678088",
+    "updated_at": "2026-02-21T15:21:06.678088"
+  },
+  {
+    "food_name": "Greek Lemon Chicken Breast",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:21:06.681530",
+    "updated_at": "2026-02-21T15:21:06.681530"
+  },
+  {
+    "food_name": "Green Bean Stir Fry",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:21:06.685199",
+    "updated_at": "2026-02-21T15:21:06.685199"
+  },
+  {
+    "food_name": "Mashed Potatoes",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:21:06.687166",
+    "updated_at": "2026-02-21T15:21:06.687166"
+  },
+  {
+    "food_name": "Waffle w/Strawberries",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:21:06.689052",
+    "updated_at": "2026-02-21T15:21:06.689052"
+  },
+  {
+    "food_name": "Lo Mein w/Mushrooms (VN)",
+    "score": 7,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:21:29.709510",
+    "updated_at": "2026-02-21T15:21:29.709510"
+  },
+  {
+    "food_name": "Five Treasure Shrimp Lo Mein",
+    "score": 7,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:21:32.876073",
+    "updated_at": "2026-02-21T15:21:32.876073"
+  },
+  {
+    "food_name": "Southwestern Corned Beef Hash",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:21:45.459281",
+    "updated_at": "2026-02-21T15:21:45.459281"
+  },
+  {
+    "food_name": "Vegan Sweet Potato Hash",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:21:45.466876",
+    "updated_at": "2026-02-21T15:21:45.466876"
+  },
+  {
+    "food_name": "Sister Schubert Dinner Roll",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:21:45.477608",
+    "updated_at": "2026-02-21T15:21:45.477608"
+  },
+  {
+    "food_name": "Roasted Italian Vegetables",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:21:45.483728",
+    "updated_at": "2026-02-21T15:21:45.483728"
+  },
+  {
+    "food_name": "Spinach & Cheese Tortellini",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:21:45.487490",
+    "updated_at": "2026-02-21T15:21:45.487490"
+  },
+  {
+    "food_name": "Vegan Chick'n Parm Pizza",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:21:45.490910",
+    "updated_at": "2026-02-21T15:21:45.490910"
+  },
+  {
+    "food_name": "Pizza Slice BBQ Pulled Pork",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:21:45.494445",
+    "updated_at": "2026-02-21T15:21:45.494445"
+  },
+  {
+    "food_name": "Big Texan Beef Sandwich",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:21:45.498899",
+    "updated_at": "2026-02-21T15:21:45.498899"
+  },
+  {
+    "food_name": "Sweet Potato Fries",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:21:45.501772",
+    "updated_at": "2026-02-21T15:21:45.501772"
+  },
+  {
+    "food_name": "Chicken Tamale with Oaxaca",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:21:45.503618",
+    "updated_at": "2026-02-21T15:21:45.503618"
+  },
+  {
+    "food_name": "Tempeh Fajitas Rice Bowl",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:21:45.505864",
+    "updated_at": "2026-02-21T15:21:45.505864"
+  },
+  {
+    "food_name": "Seitan & Coconut Thai Curry",
+    "score": 8,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:21:58.175982",
+    "updated_at": "2026-02-21T15:21:58.175982"
+  },
+  {
+    "food_name": "Smoked Salmon",
+    "score": 7,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:21:59.363610",
+    "updated_at": "2026-02-21T15:21:59.363610"
+  },
+  {
+    "food_name": "Butter Chicken",
+    "score": 7,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:22:05.699775",
+    "updated_at": "2026-02-21T15:22:05.699775"
+  },
+  {
+    "food_name": "Vegetable Coconut Curry w/Rice",
+    "score": 6,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:22:12.733421",
+    "updated_at": "2026-02-21T15:22:12.733421"
+  },
+  {
+    "food_name": "Appetizer -  Pakoras Vegetable (Veg)",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:22:14.857687",
+    "updated_at": "2026-02-21T15:22:14.857687"
+  },
+  {
+    "food_name": "Irish Roast Chicken w/Leeks and Bacon",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:22:20.306837",
+    "updated_at": "2026-02-21T15:22:20.306837"
+  },
+  {
+    "food_name": "Grilled Turkey Bacon Club Sandwich",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:22:20.310564",
+    "updated_at": "2026-02-21T15:22:20.310564"
+  },
+  {
+    "food_name": "Island Spiced Pork w/ Pineapple Salsa",
+    "score": 10,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:22:30.457877",
+    "updated_at": "2026-02-21T15:22:30.457877"
+  },
+  {
+    "food_name": "Vegan Paella",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:22:31.246845",
+    "updated_at": "2026-02-21T15:22:31.246845"
+  },
+  {
+    "food_name": "Italian Meatball Sandwich",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:22:31.249561",
+    "updated_at": "2026-02-21T15:22:31.249561"
+  },
+  {
+    "food_name": "Vegetarian Italian Meatball Sandwich",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:22:31.251809",
+    "updated_at": "2026-02-21T15:22:31.251809"
+  },
+  {
+    "food_name": "Beef Stew w/ Buttermilk Biscuit",
+    "score": 6,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:22:44.542939",
+    "updated_at": "2026-02-21T15:22:44.542939"
+  },
+  {
+    "food_name": "Chicken Parmesan Sandwich",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:22:54.238161",
+    "updated_at": "2026-02-21T15:22:54.238161"
+  },
+  {
+    "food_name": "Cheese Manicotti w/ Alfredo Sauce (Veg)",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:22:54.241713",
+    "updated_at": "2026-02-21T15:22:54.241713"
+  },
+  {
+    "food_name": "Chik'n Parmesan Sandwich (Vegan)",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:22:54.244007",
+    "updated_at": "2026-02-21T15:22:54.244007"
+  },
+  {
+    "food_name": "Baked Corn Dog (Pork)",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:22:54.245961",
+    "updated_at": "2026-02-21T15:22:54.245961"
+  },
+  {
+    "food_name": "Coconut Vegetable Stew",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:22:54.247949",
+    "updated_at": "2026-02-21T15:22:54.247949"
+  },
+  {
+    "food_name": "Blackened Green Beans",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:22:54.250134",
+    "updated_at": "2026-02-21T15:22:54.250134"
+  },
+  {
+    "food_name": "Buttermilk Biscuit",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:22:54.252659",
+    "updated_at": "2026-02-21T15:22:54.252659"
+  },
+  {
+    "food_name": "Sweet & Sour Shrimp",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:23:15.095196",
+    "updated_at": "2026-02-21T15:23:15.095196"
+  },
+  {
+    "food_name": "Sauteed Spinach & Mushroom",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:23:15.100583",
+    "updated_at": "2026-02-21T15:23:15.100583"
+  },
+  {
+    "food_name": "Breaded Cheese Curds",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:23:15.103019",
+    "updated_at": "2026-02-21T15:23:15.103019"
+  },
+  {
+    "food_name": "Sauteed Zucchini",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:23:15.104910",
+    "updated_at": "2026-02-21T15:23:15.104910"
+  },
+  {
+    "food_name": "Potato and Cheddar Pierogies",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:23:23.427774",
+    "updated_at": "2026-02-21T15:23:23.427774"
+  },
+  {
+    "food_name": "Kielbasa with Pierogis",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:23:23.431064",
+    "updated_at": "2026-02-21T15:23:23.431064"
+  },
+  {
+    "food_name": "Grains Couscous Quinoa & Veg (Entree) VN",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:23:23.433989",
+    "updated_at": "2026-02-21T15:23:23.433989"
+  },
+  {
+    "food_name": "Sesame Spinach",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:23:23.435810",
+    "updated_at": "2026-02-21T15:23:23.435810"
+  },
+  {
+    "food_name": "Vegan Buffalo Sandwich on Pretzel Bun",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:23:23.437758",
+    "updated_at": "2026-02-21T15:23:23.437758"
+  },
+  {
+    "food_name": "Chicken Teriyaki Stir Fry",
+    "score": 8,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:23:23.440020",
+    "updated_at": "2026-02-21T15:23:36.211418"
+  },
+  {
+    "food_name": "Tempeh Teriyaki",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:23:23.441910",
+    "updated_at": "2026-02-21T15:23:40.829255"
+  },
+  {
+    "food_name": "Beef Harissa",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:24:27.655785",
+    "updated_at": "2026-02-21T15:24:27.655785"
+  },
+  {
+    "food_name": "Broccoli Rabe",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:24:28.694808",
+    "updated_at": "2026-02-21T15:24:28.694808"
+  },
+  {
+    "food_name": "Grilled Blended Burger w/ Cheese",
+    "score": 7,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:24:33.614359",
+    "updated_at": "2026-02-21T15:24:33.614359"
+  },
+  {
+    "food_name": "Bavarian Pretzel Stick",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:24:41.308816",
+    "updated_at": "2026-02-21T15:24:41.308816"
+  },
+  {
+    "food_name": "Italian Chicken",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:24:44.615663",
+    "updated_at": "2026-02-21T15:24:44.615663"
+  },
+  {
+    "food_name": "Roasted Red Pepper Alfredo Sauce",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:24:45.743321",
+    "updated_at": "2026-02-21T15:24:45.743321"
+  },
+  {
+    "food_name": "Ancho Braised Pork",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:24:48.428100",
+    "updated_at": "2026-02-21T15:24:48.428100"
+  },
+  {
+    "food_name": "Mediterranean Chicken",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:24:51.932901",
+    "updated_at": "2026-02-21T15:24:51.932901"
+  },
+  {
+    "food_name": "Mediterranean Beef",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:24:53.931822",
+    "updated_at": "2026-02-21T15:25:03.819864"
+  },
+  {
+    "food_name": "Fried Falafel Crisps",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:24:56.068748",
+    "updated_at": "2026-02-21T15:24:56.068748"
+  },
+  {
+    "food_name": "Build Your Own Mediterranean Bar - Four Lakes & Liz",
+    "score": 8,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:24:59.426818",
+    "updated_at": "2026-02-21T15:24:59.426818"
+  },
+  {
+    "food_name": "Indian Lentil Soup",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:25:06.498254",
+    "updated_at": "2026-02-21T15:25:06.498254"
+  },
+  {
+    "food_name": "Chicken Dumpling Soup",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:25:07.521375",
+    "updated_at": "2026-02-21T15:25:07.521375"
+  },
+  {
+    "food_name": "-Cake Spice w/ Vanilla Buttercream (VN)",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:25:09.744484",
+    "updated_at": "2026-02-21T15:25:09.744484"
+  },
+  {
+    "food_name": "M&M Bar",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:25:10.622362",
+    "updated_at": "2026-02-21T15:25:10.622362"
+  },
+  {
+    "food_name": "Ratatouille",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:25:35.593332",
+    "updated_at": "2026-02-21T15:25:35.593332"
+  },
+  {
+    "food_name": "Baked Haddock w/Butter & Lemon",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:25:35.596282",
+    "updated_at": "2026-02-21T15:25:35.596282"
+  },
+  {
+    "food_name": "Chicken Breast w/Balsamic BBQ Sauce",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:25:35.600186",
+    "updated_at": "2026-02-21T15:25:35.600186"
+  },
+  {
+    "food_name": "Mashed Sweet Potatoes",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:25:35.602313",
+    "updated_at": "2026-02-21T15:25:35.602313"
+  },
+  {
+    "food_name": "Baked Beans",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:25:35.604323",
+    "updated_at": "2026-02-21T15:25:35.604323"
+  },
+  {
+    "food_name": "Petite Corn on the Cob",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:25:35.606500",
+    "updated_at": "2026-02-21T15:25:35.606500"
+  },
+  {
+    "food_name": "Spicy Tomato Sauce",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:25:35.608598",
+    "updated_at": "2026-02-21T15:25:35.608598"
+  },
+  {
+    "food_name": "Pulled Chicken Thigh",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:25:35.611454",
+    "updated_at": "2026-02-21T15:25:35.611454"
+  },
+  {
+    "food_name": "Pizza Slice Chicken Sriracha",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:25:35.613152",
+    "updated_at": "2026-02-21T15:25:35.613152"
+  },
+  {
+    "food_name": "Mini Corn Dogs",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:25:35.614893",
+    "updated_at": "2026-02-21T15:25:35.614893"
+  },
+  {
+    "food_name": "Vegetarian Corn Dog",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:25:35.616531",
+    "updated_at": "2026-02-21T15:25:35.616531"
+  },
+  {
+    "food_name": "Jamaican Jerk Chicken",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:25:35.618124",
+    "updated_at": "2026-02-21T15:25:35.618124"
+  },
+  {
+    "food_name": "Vegetable Island Stew (VN)",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:25:35.620166",
+    "updated_at": "2026-02-21T15:25:35.620166"
+  },
+  {
+    "food_name": "Salmon Philly Roll (FujiSan)",
+    "score": 8,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:25:49.204216",
+    "updated_at": "2026-02-21T15:26:03.855298"
+  },
+  {
+    "food_name": "Salmon Spicy Roll (FujiSan)",
+    "score": 8,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:25:58.243393",
+    "updated_at": "2026-02-21T15:26:02.887735"
+  },
+  {
+    "food_name": "Tilapia Chipotle Lime Crusted",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:26:08.304492",
+    "updated_at": "2026-02-21T15:26:08.304492"
+  },
+  {
+    "food_name": "Dill Carrots",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:26:08.309895",
+    "updated_at": "2026-02-21T15:26:08.309895"
+  },
+  {
+    "food_name": "Beef Chimichurri Taco",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:26:08.313734",
+    "updated_at": "2026-02-21T15:26:08.313734"
+  },
+  {
+    "food_name": "Cauliflower Masala Taco",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:26:08.318494",
+    "updated_at": "2026-02-21T15:26:08.318494"
+  },
+  {
+    "food_name": "Vietnamese Pork with Rice (No Fish)",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:26:08.320614",
+    "updated_at": "2026-02-21T15:26:08.320614"
+  },
+  {
+    "food_name": "Calabasita Con Elote",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:26:08.323021",
+    "updated_at": "2026-02-21T15:26:08.323021"
+  },
+  {
+    "food_name": "Pork Jaeger Schnitzel Plate",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:26:15.376495",
+    "updated_at": "2026-02-21T15:26:15.376495"
+  },
+  {
+    "food_name": "Chicken Baked  (1 piece)",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:26:15.379370",
+    "updated_at": "2026-02-21T15:26:15.379370"
+  },
+  {
+    "food_name": "Pretzel Knot w/ Nacho Cheese",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:26:15.381910",
+    "updated_at": "2026-02-21T15:26:15.381910"
+  },
+  {
+    "food_name": "Herbed Spaetzle",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:26:15.384396",
+    "updated_at": "2026-02-21T15:26:15.384396"
+  },
+  {
+    "food_name": "Cabbage Red Braised",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:26:15.386738",
+    "updated_at": "2026-02-21T15:26:15.386738"
+  },
+  {
+    "food_name": "Jaeger Sauce",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:26:15.388813",
+    "updated_at": "2026-02-21T15:26:15.388813"
+  },
+  {
+    "food_name": "Build Your Own Mediterranean Bar - Rhetas",
+    "score": 8,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:26:37.026503",
+    "updated_at": "2026-02-21T15:26:37.026503"
+  },
+  {
+    "food_name": "Honey Mustard Chicken & Vegetables",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:26:46.372884",
+    "updated_at": "2026-02-21T15:26:46.372884"
+  },
+  {
+    "food_name": "Veggie Cassoulet",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:26:46.382267",
+    "updated_at": "2026-02-21T15:26:46.382267"
+  },
+  {
+    "food_name": "Pork Spicy Citrus w/Bl Beans & Rice",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:26:46.389254",
+    "updated_at": "2026-02-21T15:26:46.389254"
+  },
+  {
+    "food_name": "Pizza Slice Mac & Cheese w/ Bacon",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:26:46.398286",
+    "updated_at": "2026-02-21T15:26:46.398286"
+  },
+  {
+    "food_name": "Pesto Mushroom Sandwich",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:26:46.402738",
+    "updated_at": "2026-02-21T15:26:46.402738"
+  },
+  {
+    "food_name": "Shrimp Curry - Mango",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:26:46.405901",
+    "updated_at": "2026-02-21T15:26:46.405901"
+  },
+  {
+    "food_name": "Beef Mediterranean",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:26:46.410094",
+    "updated_at": "2026-02-21T15:26:46.410094"
+  },
+  {
+    "food_name": "Falafel",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:26:46.412689",
+    "updated_at": "2026-02-21T15:26:46.412689"
+  },
+  {
+    "food_name": "Breadstick - Garlic",
+    "score": 2,
+    "dining_hall": "rhetas-market",
+    "created_at": "2026-02-21T15:26:46.415557",
+    "updated_at": "2026-02-21T15:26:46.415557"
+  },
+  {
+    "food_name": "Grilled Cheese Sandwich on Wheat",
+    "score": 5,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:27:05.827718",
+    "updated_at": "2026-02-21T15:27:05.827718"
+  },
+  {
+    "food_name": "Vegan Grilled Cheese Sandwich",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:27:22.831042",
+    "updated_at": "2026-02-21T15:27:22.831042"
+  },
+  {
+    "food_name": "Brazilian Chicken w/ Salsa Vinaigrette",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:27:22.842900",
+    "updated_at": "2026-02-21T15:27:22.842900"
+  },
+  {
+    "food_name": "Beef French Dip Sandwich",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:27:22.849632",
+    "updated_at": "2026-02-21T15:27:22.849632"
+  },
+  {
+    "food_name": "Cilantro Lime Rice & Black Beans",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:27:22.853579",
+    "updated_at": "2026-02-21T15:27:22.853579"
+  },
+  {
+    "food_name": "Zucchini & Tomato Saute",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:27:22.856812",
+    "updated_at": "2026-02-21T15:27:22.856812"
+  },
+  {
+    "food_name": "Cheese Oaxaca Crumbled",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:27:22.860459",
+    "updated_at": "2026-02-21T15:27:22.860459"
+  },
+  {
+    "food_name": "Chicken Drumstick BBQ Glazed",
+    "score": 7,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:27:30.156354",
+    "updated_at": "2026-02-21T15:27:30.156354"
+  },
+  {
+    "food_name": "Lomo Saltado w/ Beef",
+    "score": 5,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:27:45.658634",
+    "updated_at": "2026-02-21T15:27:47.245094"
+  },
+  {
+    "food_name": "Beef Bulgogi Taco",
+    "score": 5,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:28:04.995871",
+    "updated_at": "2026-02-21T15:28:04.995871"
+  },
+  {
+    "food_name": "Portabella Mushroom Bulgogi Taco",
+    "score": 5,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:28:06.794780",
+    "updated_at": "2026-02-21T15:28:06.794780"
+  },
+  {
+    "food_name": "Baked Mahi Mahi w/ Butter & Lemon",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:28:09.447824",
+    "updated_at": "2026-02-21T15:28:09.447824"
+  },
+  {
+    "food_name": "Tofu & Bell Peppers",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:28:09.454463",
+    "updated_at": "2026-02-21T15:28:09.454463"
+  },
+  {
+    "food_name": "Green Beans w/ Pork Bacon",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:28:09.459958",
+    "updated_at": "2026-02-21T15:28:09.459958"
+  },
+  {
+    "food_name": "Lomo Saltado w/Seitan",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:28:09.463490",
+    "updated_at": "2026-02-21T15:28:09.463490"
+  },
+  {
+    "food_name": "Vegan Chorizo Street Taco",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:28:09.467773",
+    "updated_at": "2026-02-21T15:28:09.467773"
+  },
+  {
+    "food_name": "Grilled Chick'n Pita (Veg)",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:28:09.471642",
+    "updated_at": "2026-02-21T15:28:09.471642"
+  },
+  {
+    "food_name": "Reuben",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:28:48.010640",
+    "updated_at": "2026-02-21T15:28:48.010640"
+  },
+  {
+    "food_name": "Jerk Chicken Sandwich",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:28:51.311209",
+    "updated_at": "2026-02-21T15:28:51.311209"
+  },
+  {
+    "food_name": "GF & VNSpicy Pineapple Chili Crisp Pizza",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:28:51.319140",
+    "updated_at": "2026-02-21T15:28:51.319140"
+  },
+  {
+    "food_name": "Sausage (Pork) & Pepperoni Pizza Slice",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:28:51.326501",
+    "updated_at": "2026-02-21T15:28:51.326501"
+  },
+  {
+    "food_name": "Thin Crust Tavern Style Pepperoni Pizza",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:29:02.330473",
+    "updated_at": "2026-02-21T15:29:02.330473"
+  },
+  {
+    "food_name": "Polenta Cakes",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:29:02.337104",
+    "updated_at": "2026-02-21T15:29:02.337104"
+  },
+  {
+    "food_name": "Swiss Chard with Lentils",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:29:02.345576",
+    "updated_at": "2026-02-21T15:29:02.345576"
+  },
+  {
+    "food_name": "Chicken Grilled Cordon Bleu (Pork)",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:29:15.378620",
+    "updated_at": "2026-02-21T15:29:15.378620"
+  },
+  {
+    "food_name": "-Chocolate Chip Cheesecake Bar",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:29:15.386298",
+    "updated_at": "2026-02-21T15:29:15.386298"
+  },
+  {
+    "food_name": "Vegan Sugar Cookie (VN)",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:29:15.391702",
+    "updated_at": "2026-02-21T15:29:15.391702"
+  },
+  {
+    "food_name": "Fried Popcorn Shrimp",
+    "score": 7,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:29:31.445036",
+    "updated_at": "2026-02-21T15:29:31.445036"
+  },
+  {
+    "food_name": "BBQ Tofu w/ Peppers",
+    "score": 5,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:29:40.218749",
+    "updated_at": "2026-02-21T15:29:41.619209"
+  },
+  {
+    "food_name": "Blistered Green Bean w/ Pepper & Shallot",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:29:40.227235",
+    "updated_at": "2026-02-21T15:29:40.227235"
+  },
+  {
+    "food_name": "Portabella Mediterranean",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:29:40.232802",
+    "updated_at": "2026-02-21T15:29:40.232802"
+  },
+  {
+    "food_name": "Creamy Tomato Soup",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:29:40.236755",
+    "updated_at": "2026-02-21T15:29:40.236755"
+  },
+  {
+    "food_name": "Beef Chili",
+    "score": 2,
+    "dining_hall": "lowell-market",
+    "created_at": "2026-02-21T15:29:40.240001",
+    "updated_at": "2026-02-21T15:29:40.240001"
+  },
+  {
+    "food_name": "Thai BBQ Pork Ribs",
+    "score": 10,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:29:56.470813",
+    "updated_at": "2026-02-21T15:29:56.470813"
+  },
+  {
+    "food_name": "Rogan Josh",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:30:04.199204",
+    "updated_at": "2026-02-21T15:30:04.199204"
+  },
+  {
+    "food_name": "Chicken Biryani Entree",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:30:04.206660",
+    "updated_at": "2026-02-21T15:30:04.206660"
+  },
+  {
+    "food_name": "Madras Cabbage, Peas & Carrots",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:30:04.213896",
+    "updated_at": "2026-02-21T15:30:04.213896"
+  },
+  {
+    "food_name": "Chickpea & Spinach Stew (VN)",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:30:04.217094",
+    "updated_at": "2026-02-21T15:30:04.217094"
+  },
+  {
+    "food_name": "Cheese Tortellini",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:30:04.219908",
+    "updated_at": "2026-02-21T15:30:04.219908"
+  },
+  {
+    "food_name": "Bean & Carrot Vegetable Blend",
+    "score": 2,
+    "dining_hall": "lizs-market",
+    "created_at": "2026-02-21T15:30:04.222660",
+    "updated_at": "2026-02-21T15:30:04.222660"
+  },
+  {
+    "food_name": "Baked Salmon with Mustard Sauce",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:30:16.387591",
+    "updated_at": "2026-02-21T15:30:16.387591"
+  },
+  {
+    "food_name": "Broasted Chicken",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:30:16.390082",
+    "updated_at": "2026-02-21T15:30:16.390082"
+  },
+  {
+    "food_name": "Pasta",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:30:16.394022",
+    "updated_at": "2026-02-21T15:30:16.394022"
+  },
+  {
+    "food_name": "Squash Butternut w/ Zatar and Tahini",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:30:16.396050",
+    "updated_at": "2026-02-21T15:30:16.396050"
+  },
+  {
+    "food_name": "Homestyle Alfredo Sauce",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:30:16.398218",
+    "updated_at": "2026-02-21T15:30:16.398218"
+  },
+  {
+    "food_name": "Gnocchi w/ Pork Chorizo Sauce",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:30:16.400617",
+    "updated_at": "2026-02-21T15:30:16.400617"
+  },
+  {
+    "food_name": "Pizza Slice BBQ Chicken & Bacon",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:30:16.402839",
+    "updated_at": "2026-02-21T15:30:16.402839"
+  },
+  {
+    "food_name": "Pizza Slice 16\" Brushetta (AYCTE)",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:30:16.407014",
+    "updated_at": "2026-02-21T15:30:16.407014"
+  },
+  {
+    "food_name": "Gluten Free Pork Sausage Pizza Quarter",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:30:16.409074",
+    "updated_at": "2026-02-21T15:30:16.409074"
+  },
+  {
+    "food_name": "Sweet & Sour Chicken",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:30:16.411671",
+    "updated_at": "2026-02-21T15:30:16.411671"
+  },
+  {
+    "food_name": "Plant Based Sweet & Sour Chicken",
+    "score": 2,
+    "dining_hall": "gordon-avenue-market",
+    "created_at": "2026-02-21T15:30:16.413965",
+    "updated_at": "2026-02-21T15:30:16.413965"
+  },
+  {
+    "food_name": "Smoked Beef Round Plate",
+    "score": 8,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:30:27.838290",
+    "updated_at": "2026-02-21T15:30:27.838290"
+  },
+  {
+    "food_name": "Jerk Pork Chop",
+    "score": 5,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:30:30.063185",
+    "updated_at": "2026-02-21T15:30:30.063185"
+  },
+  {
+    "food_name": "Caribbean Portabella w/Rice",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:31:35.978084",
+    "updated_at": "2026-02-21T15:31:35.978084"
+  },
+  {
+    "food_name": "Grilled Ham & Swiss Sandwich",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:31:35.985968",
+    "updated_at": "2026-02-21T15:31:35.985968"
+  },
+  {
+    "food_name": "BajAvocado Beyond Burger (VN)",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:31:35.988907",
+    "updated_at": "2026-02-21T15:31:35.988907"
+  },
+  {
+    "food_name": "Beef Broccoli Stir Fry",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:31:35.992147",
+    "updated_at": "2026-02-21T15:31:35.992147"
+  },
+  {
+    "food_name": "Fresh Mixed Vegetables",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:31:35.994656",
+    "updated_at": "2026-02-21T15:31:35.994656"
+  },
+  {
+    "food_name": "Rice Noodles  (VN)",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:31:35.997096",
+    "updated_at": "2026-02-21T15:31:35.997096"
+  },
+  {
+    "food_name": "Sweet Chili Wing Sauce",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:31:36.000717",
+    "updated_at": "2026-02-21T15:31:36.000717"
+  },
+  {
+    "food_name": "Szechuan Sauce",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:31:36.004271",
+    "updated_at": "2026-02-21T15:31:36.004271"
+  },
+  {
+    "food_name": "Chicken Wings Boneless Plain",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:31:36.007055",
+    "updated_at": "2026-02-21T15:31:36.007055"
+  },
+  {
+    "food_name": "Buffalo Wing Sauce",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:31:36.010172",
+    "updated_at": "2026-02-21T15:31:36.010172"
+  },
+  {
+    "food_name": "Four Lakes BBQ Wing Sauce",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:31:36.013236",
+    "updated_at": "2026-02-21T15:31:36.013236"
+  },
+  {
+    "food_name": "Chipotle Ranch Wing Sauce",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:31:36.017069",
+    "updated_at": "2026-02-21T15:31:36.017069"
+  },
+  {
+    "food_name": "BYO Bar - Mac & Cheese",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:31:36.020214",
+    "updated_at": "2026-02-21T15:31:36.020214"
+  },
+  {
+    "food_name": "Build Your Own Mac & Cheese Bar",
+    "score": 2,
+    "dining_hall": "four-lakes-market",
+    "created_at": "2026-02-21T15:31:36.022899",
+    "updated_at": "2026-02-21T15:31:36.022899"
+  }
+]
