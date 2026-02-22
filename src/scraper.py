@@ -5,7 +5,7 @@ from datetime import date, datetime
 
 import httpx
 
-from .cache import clear_cache, get_cached_menu, set_cached_menu
+from .cache import clear_cache, get_cached_menu, set_cached_meal
 from .models import DailyMenu, DiningHall, MealPeriod, MenuItem, MenuDay
 
 BASE_URL = "https://wisc-housingdining.api.nutrislice.com/menu/api"
@@ -116,41 +116,33 @@ async def fetch_daily_menu(
     if menu_types is None:
         menu_types = MENU_TYPES
 
-    # Try to get from cache first
-    if use_cache:
-        cached = get_cached_menu(menu_date, hall.slug)
-        if cached:
-            # Filter meals to only requested types
-            if menu_types != MENU_TYPES:
-                cached.meals = {k: v for k, v in cached.meals.items() if k in menu_types}
-            return cached
-
     should_close = client is None
     if client is None:
         client = httpx.AsyncClient()
 
     try:
         meals = {}
-        tasks = [
-            fetch_menu(hall.slug, menu_date, meal_type, client)
-            for meal_type in menu_types
-        ]
-        results = await asyncio.gather(*tasks)
 
-        for meal_type, items in zip(menu_types, results):
+        for meal_type in menu_types:
+            # Try cache first for each meal type
+            if use_cache:
+                cached_meal = get_cached_menu(menu_date, hall.slug, meal_type)
+                if cached_meal and cached_meal.items:
+                    meals[meal_type] = cached_meal
+                    continue
+
+            # Fetch from API
+            items = await fetch_menu(hall.slug, menu_date, meal_type, client)
             if items:
                 meals[meal_type] = MealPeriod(name=meal_type.capitalize(), items=items)
+                # Cache the result
+                set_cached_meal(menu_date, hall, meal_type, items)
 
-        daily_menu = DailyMenu(
+        return DailyMenu(
             dining_hall=hall,
             date=menu_date.strftime("%Y-%m-%d"),
             meals=meals,
         )
-
-        # Cache the result (only for today/tomorrow)
-        set_cached_menu(daily_menu)
-
-        return daily_menu
     finally:
         if should_close:
             await client.aclose()
