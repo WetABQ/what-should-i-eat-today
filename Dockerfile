@@ -25,9 +25,11 @@ RUN chmod +x start.sh
 # Copy built frontend
 COPY --from=frontend /app/web/dist ./web/dist
 
-# Create data directory and copy default preset
+# Create data directory
 RUN mkdir -p data/cache data/presets
-COPY data/presets/default.json ./data/presets/
+
+# Copy default preset to a backup location (volume mount will override /app/data)
+COPY data/presets/default.json ./default-preset.json
 
 ENV PORT=8000
 EXPOSE 8000
