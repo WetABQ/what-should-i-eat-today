@@ -2,8 +2,21 @@
 
 import logging
 import os
-from datetime import date, time, timedelta
+from datetime import datetime, time, timedelta
 from zoneinfo import ZoneInfo
+
+# Always use Chicago timezone
+CHICAGO_TZ = ZoneInfo("America/Chicago")
+
+
+def today_cst() -> datetime:
+    """Get today's date in Chicago timezone."""
+    return datetime.now(CHICAGO_TZ).date()
+
+
+def tomorrow_cst() -> datetime:
+    """Get tomorrow's date in Chicago timezone."""
+    return today_cst() + timedelta(days=1)
 
 from telegram import BotCommand, Update
 from telegram.ext import (
@@ -74,40 +87,33 @@ class DiningBot:
         )
 
     async def today(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-        """Handle /today command."""
-        meal_type = "lunch"
-        if context.args:
-            meal_type = context.args[0].lower()
-            if meal_type not in ["breakfast", "lunch", "dinner"]:
-                meal_type = "lunch"
-
-        await update.message.reply_text("🔄 Fetching today's menus...")
+        """Handle /today command - returns both lunch and dinner."""
+        target_date = today_cst()
+        await update.message.reply_text(f"🔄 Fetching menus for {target_date} (CST)...")
 
         try:
-            menu_day = await fetch_all_menus(date.today(), [meal_type])
-            recommendation = self.analyzer.analyze_day(menu_day, meal_type)
-            response = self.analyzer.format_recommendation(recommendation, verbose=True)
-            await update.message.reply_text(response)
+            # Fetch and send both lunch and dinner
+            for meal_type in ["lunch", "dinner"]:
+                menu_day = await fetch_all_menus(target_date, [meal_type])
+                recommendation = self.analyzer.analyze_day(menu_day, meal_type)
+                response = self.analyzer.format_recommendation(recommendation, verbose=True)
+                await update.message.reply_text(response)
         except Exception as e:
             logger.exception("Error fetching menus")
             await update.message.reply_text(f"❌ Error fetching menus: {e}")
 
     async def tomorrow(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-        """Handle /tomorrow command."""
-        meal_type = "lunch"
-        if context.args:
-            meal_type = context.args[0].lower()
-            if meal_type not in ["breakfast", "lunch", "dinner"]:
-                meal_type = "lunch"
-
-        await update.message.reply_text("🔄 Fetching tomorrow's menus...")
+        """Handle /tomorrow command - returns both lunch and dinner."""
+        target_date = tomorrow_cst()
+        await update.message.reply_text(f"🔄 Fetching menus for {target_date} (CST)...")
 
         try:
-            tomorrow_date = date.today() + timedelta(days=1)
-            menu_day = await fetch_all_menus(tomorrow_date, [meal_type])
-            recommendation = self.analyzer.analyze_day(menu_day, meal_type)
-            response = self.analyzer.format_recommendation(recommendation, verbose=True)
-            await update.message.reply_text(response)
+            # Fetch and send both lunch and dinner
+            for meal_type in ["lunch", "dinner"]:
+                menu_day = await fetch_all_menus(target_date, [meal_type])
+                recommendation = self.analyzer.analyze_day(menu_day, meal_type)
+                response = self.analyzer.format_recommendation(recommendation, verbose=True)
+                await update.message.reply_text(response)
         except Exception as e:
             logger.exception("Error fetching menus")
             await update.message.reply_text(f"❌ Error fetching menus: {e}")
@@ -181,11 +187,12 @@ class DiningBot:
             await update.message.reply_text("❌ No channel configured. Set TELEGRAM_CHANNEL_ID.")
             return
 
-        await update.message.reply_text(f"🔄 Pushing to channel {self.channel_id}...")
+        target_date = today_cst()
+        await update.message.reply_text(f"🔄 Pushing {target_date} (CST) to channel {self.channel_id}...")
 
         try:
-            for meal_type in self.config.meal_types:
-                menu_day = await fetch_all_menus(date.today(), [meal_type])
+            for meal_type in ["lunch", "dinner"]:
+                menu_day = await fetch_all_menus(target_date, [meal_type])
                 recommendation = self.analyzer.analyze_day(menu_day, meal_type)
                 message = self.analyzer.format_recommendation(recommendation, verbose=True)
 
@@ -205,10 +212,11 @@ class DiningBot:
             logger.info("No channel configured for daily push")
             return
 
+        target_date = today_cst()
         try:
-            # Build messages for all meal types
-            for meal_type in self.config.meal_types:
-                menu_day = await fetch_all_menus(date.today(), [meal_type])
+            # Send both lunch and dinner
+            for meal_type in ["lunch", "dinner"]:
+                menu_day = await fetch_all_menus(target_date, [meal_type])
                 recommendation = self.analyzer.analyze_day(menu_day, meal_type)
                 message = self.analyzer.format_recommendation(recommendation, verbose=True)
 
@@ -217,7 +225,7 @@ class DiningBot:
                     text=message,
                 )
 
-            logger.info(f"Daily push sent to channel {self.channel_id}")
+            logger.info(f"Daily push sent to channel {self.channel_id} for {target_date}")
         except Exception as e:
             logger.exception(f"Error sending daily push to channel: {e}")
 
