@@ -1,9 +1,8 @@
 """Telegram Bot for dining hall recommendations."""
 
-import json
 import logging
+import os
 from datetime import date, time, timedelta
-from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from telegram import BotCommand, Update
@@ -19,8 +18,6 @@ BOT_COMMANDS = [
     BotCommand("tomorrow", "Get tomorrow's recommendations"),
     BotCommand("menu", "View specific dining hall menu"),
     BotCommand("halls", "List available dining halls"),
-    BotCommand("subscribe", "Subscribe to daily notifications"),
-    BotCommand("unsubscribe", "Unsubscribe from notifications"),
     BotCommand("config", "View current configuration"),
     BotCommand("help", "Show help message"),
 ]
@@ -35,34 +32,19 @@ from .scraper import (
 
 logger = logging.getLogger(__name__)
 
-# Subscribers storage
-SUBSCRIBERS_FILE = Path(__file__).parent.parent / "data" / "subscribers.json"
-
-
-def load_subscribers() -> set[int]:
-    """Load subscriber chat IDs from file."""
-    if not SUBSCRIBERS_FILE.exists():
-        return set()
-    try:
-        with open(SUBSCRIBERS_FILE) as f:
-            return set(json.load(f))
-    except (json.JSONDecodeError, TypeError):
-        return set()
-
-
-def save_subscribers(subscribers: set[int]) -> None:
-    """Save subscriber chat IDs to file."""
-    SUBSCRIBERS_FILE.parent.mkdir(parents=True, exist_ok=True)
-    with open(SUBSCRIBERS_FILE, "w") as f:
-        json.dump(list(subscribers), f)
-
 
 class DiningBot:
     """Telegram bot for dining hall recommendations."""
 
-    def __init__(self, token: str):
-        """Initialize the bot with token."""
+    def __init__(self, token: str, channel_id: str | None = None):
+        """Initialize the bot with token.
+
+        Args:
+            token: Telegram bot token
+            channel_id: Channel ID or username (e.g., @my_channel) for daily push
+        """
         self.token = token
+        self.channel_id = channel_id or os.getenv("TELEGRAM_CHANNEL_ID")
         self.config = Config()
         self.analyzer = get_analyzer()
         self.app: Application | None = None
@@ -73,53 +55,22 @@ class DiningBot:
 
     async def help(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         """Handle /help command."""
-        chat_id = update.effective_chat.id
-        is_subscribed = chat_id in load_subscribers()
-        sub_status = "✅ Subscribed" if is_subscribed else "❌ Not subscribed"
+        channel_info = f"Channel: {self.channel_id}" if self.channel_id else "No channel configured"
 
         await update.message.reply_text(
             "🍽️ *What Should I Eat Today*\n\n"
-            "I can help you find the best dining hall based on today's menu!\n\n"
+            "I help you find the best dining hall based on today's menu!\n\n"
             "*Commands:*\n"
             "/today - Get today's recommendations\n"
             "/tomorrow - Get tomorrow's recommendations\n"
             "/menu <hall> - View specific dining hall menu\n"
             "/halls - List available dining halls\n"
-            "/subscribe - Subscribe to daily notifications\n"
-            "/unsubscribe - Unsubscribe from daily notifications\n"
             "/config - View current configuration\n"
             "/help - Show this help message\n\n"
-            f"*Daily Push:* {sub_status}\n\n"
+            f"*Daily Push:* {channel_info}\n\n"
             "Example: `/menu gordon-avenue-market`",
             parse_mode="Markdown",
         )
-
-    async def subscribe(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-        """Handle /subscribe command."""
-        chat_id = update.effective_chat.id
-        subscribers = load_subscribers()
-
-        if chat_id in subscribers:
-            await update.message.reply_text("✅ You're already subscribed to daily notifications!")
-        else:
-            subscribers.add(chat_id)
-            save_subscribers(subscribers)
-            await update.message.reply_text(
-                "✅ Subscribed! You'll receive daily recommendations at 10:00 AM (Chicago time).\n\n"
-                "Use /unsubscribe to stop notifications."
-            )
-
-    async def unsubscribe(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-        """Handle /unsubscribe command."""
-        chat_id = update.effective_chat.id
-        subscribers = load_subscribers()
-
-        if chat_id in subscribers:
-            subscribers.remove(chat_id)
-            save_subscribers(subscribers)
-            await update.message.reply_text("👋 Unsubscribed from daily notifications.")
-        else:
-            await update.message.reply_text("You're not subscribed to daily notifications.")
 
     async def today(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         """Handle /today command."""
@@ -224,36 +175,26 @@ class DiningBot:
         await update.message.reply_text("✅ Configuration reloaded!")
 
     async def send_daily_push(self, context: ContextTypes.DEFAULT_TYPE) -> None:
-        """Send daily recommendation push to all subscribers."""
-        subscribers = load_subscribers()
-        if not subscribers:
-            logger.info("No subscribers for daily push")
+        """Send daily recommendation push to channel."""
+        if not self.channel_id:
+            logger.info("No channel configured for daily push")
             return
 
         try:
             # Build messages for all meal types
-            messages = []
             for meal_type in self.config.meal_types:
                 menu_day = await fetch_all_menus(date.today(), [meal_type])
                 recommendation = self.analyzer.analyze_day(menu_day, meal_type)
                 message = self.analyzer.format_recommendation(recommendation, verbose=True)
-                messages.append(message)
 
-            # Send to all subscribers
-            for chat_id in subscribers:
-                try:
-                    for message in messages:
-                        await context.bot.send_message(chat_id=chat_id, text=message)
-                except Exception as e:
-                    logger.warning(f"Failed to send to {chat_id}: {e}")
-                    # Remove invalid chat IDs
-                    if "chat not found" in str(e).lower() or "blocked" in str(e).lower():
-                        subscribers.discard(chat_id)
-                        save_subscribers(subscribers)
+                await context.bot.send_message(
+                    chat_id=self.channel_id,
+                    text=message,
+                )
 
-            logger.info(f"Daily push sent to {len(subscribers)} subscribers")
+            logger.info(f"Daily push sent to channel {self.channel_id}")
         except Exception as e:
-            logger.exception("Error sending daily push")
+            logger.exception(f"Error sending daily push to channel: {e}")
 
     def _schedule_daily_push(self, app: Application) -> None:
         """Schedule daily push job."""
@@ -291,8 +232,6 @@ class DiningBot:
         self.app.add_handler(CommandHandler("tomorrow", self.tomorrow))
         self.app.add_handler(CommandHandler("menu", self.menu))
         self.app.add_handler(CommandHandler("halls", self.halls))
-        self.app.add_handler(CommandHandler("subscribe", self.subscribe))
-        self.app.add_handler(CommandHandler("unsubscribe", self.unsubscribe))
         self.app.add_handler(CommandHandler("config", self.show_config))
         self.app.add_handler(CommandHandler("refresh", self.refresh))
 
