@@ -18,6 +18,7 @@ BOT_COMMANDS = [
     BotCommand("tomorrow", "Get tomorrow's recommendations"),
     BotCommand("menu", "View specific dining hall menu"),
     BotCommand("halls", "List available dining halls"),
+    BotCommand("push", "Push today's menu to channel (test)"),
     BotCommand("config", "View current configuration"),
     BotCommand("help", "Show help message"),
 ]
@@ -174,6 +175,30 @@ class DiningBot:
         self.config.reload()
         await update.message.reply_text("✅ Configuration reloaded!")
 
+    async def push(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+        """Handle /push command - manually push to channel for testing."""
+        if not self.channel_id:
+            await update.message.reply_text("❌ No channel configured. Set TELEGRAM_CHANNEL_ID.")
+            return
+
+        await update.message.reply_text(f"🔄 Pushing to channel {self.channel_id}...")
+
+        try:
+            for meal_type in self.config.meal_types:
+                menu_day = await fetch_all_menus(date.today(), [meal_type])
+                recommendation = self.analyzer.analyze_day(menu_day, meal_type)
+                message = self.analyzer.format_recommendation(recommendation, verbose=True)
+
+                await context.bot.send_message(
+                    chat_id=self.channel_id,
+                    text=message,
+                )
+
+            await update.message.reply_text(f"✅ Pushed to {self.channel_id}")
+        except Exception as e:
+            logger.exception("Error pushing to channel")
+            await update.message.reply_text(f"❌ Error: {e}")
+
     async def send_daily_push(self, context: ContextTypes.DEFAULT_TYPE) -> None:
         """Send daily recommendation push to channel."""
         if not self.channel_id:
@@ -232,6 +257,7 @@ class DiningBot:
         self.app.add_handler(CommandHandler("tomorrow", self.tomorrow))
         self.app.add_handler(CommandHandler("menu", self.menu))
         self.app.add_handler(CommandHandler("halls", self.halls))
+        self.app.add_handler(CommandHandler("push", self.push))
         self.app.add_handler(CommandHandler("config", self.show_config))
         self.app.add_handler(CommandHandler("refresh", self.refresh))
 
