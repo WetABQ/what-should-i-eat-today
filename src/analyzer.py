@@ -173,8 +173,12 @@ class MenuAnalyzer:
             rec: The recommendation to format.
             verbose: If True, include detailed item lists for each hall.
         """
+        # Add weekday to date
+        from datetime import datetime
+        weekday = datetime.strptime(rec.date, "%Y-%m-%d").strftime("%A")
+
         lines = [
-            f"📅 {rec.date} - {rec.meal_type.capitalize()}",
+            f"📅 {rec.date} ({weekday}) - {rec.meal_type.capitalize()}",
             "",
             "🏆 Rankings:",
         ]
@@ -220,9 +224,13 @@ class MenuAnalyzer:
         if not meal:
             return f"No {meal_type} menu available for {menu.dining_hall.name}"
 
+        # Add weekday to date
+        from datetime import datetime
+        weekday = datetime.strptime(menu.date, "%Y-%m-%d").strftime("%A")
+
         lines = [
             f"🍽️ {menu.dining_hall.name} - {meal_type.capitalize()}",
-            f"📅 {menu.date}",
+            f"📅 {menu.date} ({weekday})",
             "",
         ]
 
