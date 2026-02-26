@@ -1,5 +1,6 @@
 """Menu analysis and recommendation logic."""
 
+import re
 from pathlib import Path
 
 import yaml
@@ -156,55 +157,50 @@ class MenuAnalyzer:
             top_pick=top_pick,
         )
 
-    def format_recommendation(self, rec: DailyRecommendation, verbose: bool = False) -> str:
-        """Format a recommendation for display.
+    def _clean_item_name(self, item_name: str) -> str:
+        """Clean item name by removing redundant suffixes and prefixes."""
+        # Remove trailing " - XxxXxx" suffix (dining hall name)
+        name = re.sub(r"\s+-\s+\S+.*$", "", item_name)
+        # Remove "Build Your Own " prefix
+        name = re.sub(r"^Build Your Own\s+", "", name)
+        return name.strip()
 
-        Args:
-            rec: The recommendation to format.
-            verbose: If True, include detailed item lists for each hall.
-        """
-        # Add weekday to date
+    def format_recommendation(self, rec: DailyRecommendation) -> str:
+        """Format a recommendation for Telegram Markdown display."""
         from datetime import datetime
         weekday = datetime.strptime(rec.date, "%Y-%m-%d").strftime("%A")
 
-        lines = [
-            f"📅 {rec.date} ({weekday}) - {rec.meal_type.capitalize()}",
-            "",
-            "🏆 Rankings:",
-        ]
+        lines = [f"📅 *{rec.date} ({weekday}) - {rec.meal_type.capitalize()}*"]
 
         medals = ["🥇", "🥈", "🥉", "4️⃣", "5️⃣", "6️⃣"]
 
         for i, score in enumerate(rec.rankings):
             medal = medals[i] if i < len(medals) else f"{i+1}."
             hall_name = score.dining_hall.name
-            count = score.total_score
+            has_recommended = score.favorite_items or score.good_items
 
-            line = f"{medal} {hall_name}: {count} rated"
-            lines.append(line)
+            if has_recommended:
+                # Expanded format for halls with recommendations
+                lines.append("")  # blank line before
+                top_label = " (🔥 Top Choice)" if i == 0 else ""
+                lines.append(f"{medal} *{hall_name}*{top_label}")
 
-            if verbose:
-                # Show favorites (4-5★)
                 if score.favorite_items:
-                    items_str = " · ".join(score.favorite_items[:4])
-                    lines.append(f"   ⭐ 4-5★: {items_str}")
+                    cleaned = [self._clean_item_name(n) for n in score.favorite_items[:2]]
+                    lines.append(f"🌟 推荐: {', '.join(cleaned)}")
+                elif score.good_items:
+                    cleaned = [self._clean_item_name(n) for n in score.good_items[:2]]
+                    lines.append(f"👍 推荐: {', '.join(cleaned)}")
 
-                # Show good items (2-3.5★)
-                if score.good_items:
-                    items_str = " · ".join(score.good_items[:4])
-                    lines.append(f"   👍 2-3.5★: {items_str}")
-
-                # Show low items (1-1.5★)
                 if score.low_items:
-                    items_str = " · ".join(score.low_items[:4])
-                    lines.append(f"   👎 1-1.5★: {items_str}")
+                    cleaned = [self._clean_item_name(n) for n in score.low_items[:2]]
+                    lines.append(f"⚠️ 避雷: {', '.join(cleaned)}")
+            else:
+                # Compact format for halls with no recommendations
+                lines.append(f"{medal} {hall_name}: ❌ 无推荐菜")
 
-        # Simple mode: just show top pick favorites
-        if not verbose and rec.top_pick and rec.top_pick.favorite_items:
-            lines.append("")
-            lines.append(f"⭐ Favorites at {rec.top_pick.dining_hall.name}:")
-            for item in rec.top_pick.favorite_items[:5]:
-                lines.append(f"   • {item}")
+        lines.append("")
+        lines.append("[📋 查看今日完整菜单](https://what-should-i-eat-today-production.up.railway.app/menu)")
 
         return "\n".join(lines)
 

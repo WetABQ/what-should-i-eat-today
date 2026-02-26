@@ -96,8 +96,8 @@ class DiningBot:
             for meal_type in ["lunch", "dinner"]:
                 menu_day = await fetch_all_menus(target_date, [meal_type])
                 recommendation = self.analyzer.analyze_day(menu_day, meal_type)
-                response = self.analyzer.format_recommendation(recommendation, verbose=True)
-                await update.message.reply_text(response)
+                response = self.analyzer.format_recommendation(recommendation)
+                await update.message.reply_text(response, parse_mode="Markdown")
         except Exception as e:
             logger.exception("Error fetching menus")
             await update.message.reply_text(f"❌ Error fetching menus: {e}")
@@ -112,8 +112,8 @@ class DiningBot:
             for meal_type in ["lunch", "dinner"]:
                 menu_day = await fetch_all_menus(target_date, [meal_type])
                 recommendation = self.analyzer.analyze_day(menu_day, meal_type)
-                response = self.analyzer.format_recommendation(recommendation, verbose=True)
-                await update.message.reply_text(response)
+                response = self.analyzer.format_recommendation(recommendation)
+                await update.message.reply_text(response, parse_mode="Markdown")
         except Exception as e:
             logger.exception("Error fetching menus")
             await update.message.reply_text(f"❌ Error fetching menus: {e}")
@@ -193,11 +193,12 @@ class DiningBot:
             for meal_type in ["lunch", "dinner"]:
                 menu_day = await fetch_all_menus(target_date, [meal_type])
                 recommendation = self.analyzer.analyze_day(menu_day, meal_type)
-                message = self.analyzer.format_recommendation(recommendation, verbose=True)
+                message = self.analyzer.format_recommendation(recommendation)
 
                 await context.bot.send_message(
                     chat_id=self.channel_id,
                     text=message,
+                    parse_mode="Markdown",
                 )
 
             await update.message.reply_text(f"✅ Pushed to {self.channel_id}")
@@ -217,11 +218,12 @@ class DiningBot:
             for meal_type in ["lunch", "dinner"]:
                 menu_day = await fetch_all_menus(target_date, [meal_type])
                 recommendation = self.analyzer.analyze_day(menu_day, meal_type)
-                message = self.analyzer.format_recommendation(recommendation, verbose=True)
+                message = self.analyzer.format_recommendation(recommendation)
 
                 await context.bot.send_message(
                     chat_id=self.channel_id,
                     text=message,
+                    parse_mode="Markdown",
                 )
 
             logger.info(f"Daily push sent to channel {self.channel_id} for {target_date}")
