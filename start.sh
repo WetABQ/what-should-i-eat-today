@@ -35,13 +35,20 @@ if [ -f "$APP_DIR/.env" ]; then
     set +a
 fi
 
+# Use uv locally, python in Docker
+if command -v uv &> /dev/null && [ ! -d "/app/src" ]; then
+    PY="uv run python"
+else
+    PY="python"
+fi
+
 # Start the Telegram bot in background if token is set
 if [ -n "$TELEGRAM_BOT_TOKEN" ]; then
     echo "Starting Telegram bot..."
-    python "$APP_DIR/bot.py" &
+    $PY "$APP_DIR/bot.py" &
 fi
 
 # Start the API server
 PORT="${PORT:-8000}"
 echo "Starting API server on port $PORT..."
-exec uvicorn src.api:app --host 0.0.0.0 --port "$PORT"
+exec $PY -m uvicorn src.api:app --host 0.0.0.0 --port "$PORT"

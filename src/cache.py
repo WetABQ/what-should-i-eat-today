@@ -53,7 +53,10 @@ def _load_cache() -> pl.DataFrame:
         df = pl.read_parquet(CACHE_FILE)
         # Add cached_at column if missing (for migration)
         if "cached_at" not in df.columns:
-            df = df.with_columns(pl.lit(None).alias("cached_at"))
+            df = df.with_columns(pl.lit(None).cast(pl.Utf8).alias("cached_at"))
+        # Ensure cached_at is Utf8 type (fix Null type from old cache)
+        if df.height > 0 and df.schema.get("cached_at") != pl.Utf8:
+            df = df.with_columns(pl.col("cached_at").cast(pl.Utf8))
         return df
     except Exception:
         return pl.DataFrame(schema=MENU_SCHEMA)

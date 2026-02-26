@@ -165,14 +165,13 @@ class DiningBot:
 
         storage = get_storage()
         ratings_count = len(storage.get_ratings_dict())
-        active_preset = storage.get_active_preset()
 
         response = (
             "⚙️ *Current Configuration*\n\n"
-            f"*Active preset:* {active_preset or '(none)'}\n"
             f"*Rated items:* {ratings_count}\n"
             f"*Meal types:* {', '.join(config.meal_types)}\n"
-            f"*Push time:* {config.telegram.get('daily_push_time', 'Not set')}"
+            f"*Push time:* {config.telegram.get('daily_push_time', 'Not set')}\n"
+            f"*Channel:* {self.channel_id or '(none)'}"
         )
         await update.message.reply_text(response, parse_mode="Markdown")
 

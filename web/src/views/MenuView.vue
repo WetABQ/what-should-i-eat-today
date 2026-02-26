@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, watch, computed } from 'vue'
 import FoodRating from '../components/FoodRating.vue'
-import { getRatingsDict, getRating, setRating } from '../stores/ratings'
+import { ratings, getRating, setRating, fetchRatings } from '../stores/ratings'
 
 interface DiningHall {
   id: number
@@ -59,6 +59,7 @@ const mealTypes = ['breakfast', 'lunch', 'dinner']
 onMounted(async () => {
   await Promise.all([
     fetchDiningHalls(),
+    fetchRatings(),
     fetchRecommendation()
   ])
 })
@@ -91,15 +92,9 @@ async function fetchDiningHalls() {
 async function fetchRecommendation() {
   loading.value = true
   try {
-    // Send ratings from localStorage to server for calculation
     const res = await fetch(
       `/api/recommend/${selectedDate.value}?meal_type=${selectedMeal.value}`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ratings: getRatingsDict() }),
-        cache: 'no-store'
-      }
+      { cache: 'no-store' }
     )
     recommendation.value = await res.json()
   } catch (e) {
@@ -125,9 +120,8 @@ async function fetchMenu() {
   }
 }
 
-function rateFood(foodName: string, score: number) {
-  // Save to localStorage (instant, no server call needed)
-  setRating(foodName, score, selectedHall.value)
+async function rateFood(foodName: string, score: number) {
+  await setRating(foodName, score, selectedHall.value)
 }
 
 async function showRecommendations() {
@@ -144,7 +138,17 @@ function selectHallFromRanking(slug: string) {
 const currentMealItems = computed(() => {
   if (!menu.value?.meals) return []
   const meal = menu.value.meals[selectedMeal.value]
-  return meal?.items || []
+  const items = meal?.items || []
+  // Access ratings.value to make this computed reactive to rating changes
+  const _ = ratings.value.length
+  // Sort: unrated first, then by score descending
+  return [...items].sort((a, b) => {
+    const ratingA = getRating(a.name)
+    const ratingB = getRating(b.name)
+    if (!ratingA && ratingB) return -1
+    if (ratingA && !ratingB) return 1
+    return ratingB - ratingA
+  })
 })
 
 const medals = ['🥇', '🥈', '🥉', '4️⃣', '5️⃣', '6️⃣']
@@ -152,10 +156,10 @@ const medals = ['🥇', '🥈', '🥉', '4️⃣', '5️⃣', '6️⃣']
 // Quick rate all unrated items
 const quickHoverScore = ref(0)
 
-function rateAllWithScore(score: number) {
+async function rateAllWithScore(score: number) {
   for (const item of currentMealItems.value) {
     if (!getRating(item.name)) {
-      rateFood(item.name, score)
+      await rateFood(item.name, score)
     }
   }
 }

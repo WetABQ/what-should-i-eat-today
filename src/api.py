@@ -156,22 +156,12 @@ async def get_menu(
     )
 
 
-class RecommendRequest(BaseModel):
-    """Request body for recommendations with client-side ratings."""
-
-    ratings: dict[str, int] = {}  # food_name -> score
-
-
-@app.post("/api/recommend/{menu_date}")
+@app.get("/api/recommend/{menu_date}")
 async def get_recommendation(
     menu_date: str,
-    request: RecommendRequest,
     meal_type: Annotated[str, Query()] = "lunch",
 ) -> DailyRecommendation:
-    """Get daily recommendation for all dining halls.
-
-    Accepts ratings from client to calculate rankings.
-    """
+    """Get dining hall recommendations using server-side ratings."""
     try:
         parsed_date = date.fromisoformat(menu_date)
     except ValueError:
@@ -180,11 +170,7 @@ async def get_recommendation(
     menu_day = await fetch_all_menus(parsed_date, [meal_type])
     analyzer = get_analyzer()
 
-    # Use client-provided ratings if available
-    ratings_dict = request.ratings if request.ratings else None
-    recommendation = analyzer.analyze_day(menu_day, meal_type, ratings_override=ratings_dict)
-
-    return recommendation
+    return analyzer.analyze_day(menu_day, meal_type)
 
 
 # === Ratings Endpoints ===
@@ -218,93 +204,26 @@ async def delete_rating(food_name: str):
     raise HTTPException(status_code=404, detail="Rating not found")
 
 
-class SyncRequest(BaseModel):
-    """Request body for syncing ratings from browser."""
-
-    ratings: list[dict]
-
-
-@app.post("/api/ratings/sync")
-async def sync_ratings(request: SyncRequest):
-    """Sync ratings from browser localStorage to server.
-
-    This replaces all server ratings with the provided ratings.
-    Used for Telegram bot to access browser ratings.
-    """
-    storage = get_storage()
-    storage._save_ratings_raw(request.ratings)
-    return {"status": "synced", "count": len(request.ratings)}
-
-
 # === Import/Export Endpoints ===
 
 
 @app.get("/api/export")
 async def export_data():
-    """Export all ratings and presets for backup."""
+    """Export all ratings for backup."""
     storage = get_storage()
     return {
         "ratings": storage._load_ratings_raw(),
-        "active_preset": storage.get_active_preset(),
     }
 
 
 @app.post("/api/import")
 async def import_data(data: dict):
-    """Import ratings from backup."""
+    """Import ratings from backup, replacing all existing ratings."""
     storage = get_storage()
     ratings = data.get("ratings", [])
     if ratings:
         storage._save_ratings_raw(ratings)
     return {"status": "imported", "count": len(ratings)}
-
-
-# === Presets Endpoints ===
-
-
-class PresetCreateRequest(BaseModel):
-    """Request body for creating a preset."""
-
-    name: str
-    description: str = ""
-
-
-@app.get("/api/presets")
-async def list_presets():
-    """List all available presets."""
-    storage = get_storage()
-    presets = storage.list_presets()
-    active = storage.get_active_preset()
-    return {
-        "presets": presets,
-        "active": active,
-    }
-
-
-@app.post("/api/presets")
-async def create_preset(request: PresetCreateRequest):
-    """Create a new preset from current ratings."""
-    storage = get_storage()
-    preset = storage.save_preset(request.name, request.description)
-    return preset
-
-
-@app.post("/api/presets/{name}/load")
-async def load_preset(name: str):
-    """Load a preset, replacing current ratings."""
-    storage = get_storage()
-    if storage.load_preset(name):
-        return {"status": "loaded", "name": name}
-    raise HTTPException(status_code=404, detail=f"Preset not found: {name}")
-
-
-@app.delete("/api/presets/{name}")
-async def delete_preset(name: str):
-    """Delete a preset."""
-    storage = get_storage()
-    if storage.delete_preset(name):
-        return {"status": "deleted"}
-    raise HTTPException(status_code=404, detail=f"Preset not found: {name}")
 
 
 # === Cache Endpoints ===

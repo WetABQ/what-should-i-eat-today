@@ -1,4 +1,4 @@
-"""JSON-based storage for ratings and presets."""
+"""JSON-based storage for ratings."""
 
 import json
 from datetime import datetime
@@ -7,49 +7,44 @@ from pathlib import Path
 from .models import FoodRating
 
 DATA_DIR = Path(__file__).parent.parent / "data"
-RATINGS_FILE = DATA_DIR / "ratings.json"
-PRESETS_DIR = DATA_DIR / "presets"
-ACTIVE_PRESET_FILE = DATA_DIR / "active_preset.txt"
+DEFAULT_RATINGS_FILE = DATA_DIR / "presets" / "default.json"
 
 
 class Storage:
-    """Storage class for managing ratings and presets in JSON files."""
+    """Storage class for managing ratings in JSON files."""
 
     def __init__(self, data_dir: Path | None = None):
         """Initialize storage with optional custom data directory."""
         self.data_dir = data_dir or DATA_DIR
         self.ratings_file = self.data_dir / "ratings.json"
         self._ensure_data_dir()
-        self._load_default_preset_if_needed()
+        self._load_default_ratings_if_needed()
 
     def _ensure_data_dir(self) -> None:
         """Ensure the data directory exists."""
         self.data_dir.mkdir(parents=True, exist_ok=True)
 
-    def _load_default_preset_if_needed(self) -> None:
-        """Load default preset if no ratings exist."""
-        # Check if ratings file exists and has content
+    def _load_default_ratings_if_needed(self) -> None:
+        """Load default ratings if no ratings exist."""
         if self.ratings_file.exists():
             try:
                 with open(self.ratings_file) as f:
                     ratings = json.load(f)
-                if ratings:  # Has ratings, don't load default
+                if ratings:
                     return
             except json.JSONDecodeError:
                 pass
 
-        # Try to load default preset
-        default_preset = PRESETS_DIR / "default.json"
-        if default_preset.exists():
+        if DEFAULT_RATINGS_FILE.exists():
             try:
-                with open(default_preset) as f:
+                with open(DEFAULT_RATINGS_FILE) as f:
                     data = json.load(f)
                 ratings = data if isinstance(data, list) else data.get("ratings", [])
                 if ratings:
                     self._save_ratings_raw(ratings)
-                    print(f"Loaded {len(ratings)} ratings from default preset")
+                    print(f"Loaded {len(ratings)} default ratings")
             except (json.JSONDecodeError, KeyError) as e:
-                print(f"Failed to load default preset: {e}")
+                print(f"Failed to load default ratings: {e}")
 
     # === Ratings ===
 
@@ -60,7 +55,11 @@ class Storage:
 
         try:
             with open(self.ratings_file) as f:
-                return json.load(f)
+                data = json.load(f)
+            # Support both plain list and {"ratings": [...]} format
+            if isinstance(data, dict):
+                return data.get("ratings", [])
+            return data
         except json.JSONDecodeError:
             return []
 
@@ -93,7 +92,6 @@ class Storage:
         now = datetime.now()
         ratings = self._load_ratings_raw()
 
-        # Find existing rating
         existing_idx = None
         for i, r in enumerate(ratings):
             if r["food_name"] == food_name:
@@ -101,12 +99,10 @@ class Storage:
                 break
 
         if existing_idx is not None:
-            # Update existing
             ratings[existing_idx]["score"] = score
             ratings[existing_idx]["updated_at"] = now.isoformat()
             created_at = datetime.fromisoformat(ratings[existing_idx]["created_at"])
         else:
-            # Add new
             ratings.append({
                 "food_name": food_name,
                 "score": score,
@@ -155,125 +151,6 @@ class Storage:
         """Get all ratings as a dictionary of food_name -> score."""
         ratings = self._load_ratings_raw()
         return {r["food_name"]: r["score"] for r in ratings}
-
-    # === Presets ===
-
-    def _ensure_presets_dir(self) -> None:
-        """Ensure the presets directory exists."""
-        PRESETS_DIR.mkdir(parents=True, exist_ok=True)
-
-    def list_presets(self) -> list[dict]:
-        """List all available presets with their metadata."""
-        self._ensure_presets_dir()
-        presets = []
-
-        for preset_file in sorted(PRESETS_DIR.glob("*.json")):
-            try:
-                with open(preset_file) as f:
-                    data = json.load(f)
-                presets.append({
-                    "name": preset_file.stem,
-                    "rating_count": len(data.get("ratings", [])),
-                    "created_at": data.get("created_at"),
-                    "description": data.get("description", ""),
-                })
-            except (json.JSONDecodeError, KeyError):
-                continue
-
-        return presets
-
-    def save_preset(self, name: str, description: str = "") -> dict:
-        """Save current ratings as a preset."""
-        self._ensure_presets_dir()
-
-        # Load current ratings
-        ratings = self._load_ratings_raw()
-        preset_ratings = []
-        for r in ratings:
-            preset_ratings.append({
-                "food_name": r["food_name"],
-                "score": r["score"],
-                "dining_hall": r.get("dining_hall"),
-            })
-
-        preset_data = {
-            "name": name,
-            "description": description,
-            "created_at": datetime.now().isoformat(),
-            "ratings": preset_ratings,
-        }
-
-        preset_file = PRESETS_DIR / f"{name}.json"
-        with open(preset_file, "w") as f:
-            json.dump(preset_data, f, indent=2)
-
-        return {
-            "name": name,
-            "rating_count": len(preset_ratings),
-            "created_at": preset_data["created_at"],
-            "description": description,
-        }
-
-    def load_preset(self, name: str) -> bool:
-        """Load a preset, replacing current ratings."""
-        preset_file = PRESETS_DIR / f"{name}.json"
-        if not preset_file.exists():
-            return False
-
-        try:
-            with open(preset_file) as f:
-                data = json.load(f)
-        except json.JSONDecodeError:
-            return False
-
-        # Clear current ratings and load preset ratings
-        now = datetime.now().isoformat()
-        ratings = data.get("ratings", [])
-
-        # Convert to full rating format
-        new_ratings = []
-        for r in ratings:
-            new_ratings.append({
-                "food_name": r["food_name"],
-                "score": r["score"],
-                "dining_hall": r.get("dining_hall"),
-                "created_at": now,
-                "updated_at": now,
-            })
-
-        self._save_ratings_raw(new_ratings)
-
-        # Save active preset name
-        self._set_active_preset(name)
-
-        return True
-
-    def delete_preset(self, name: str) -> bool:
-        """Delete a preset."""
-        preset_file = PRESETS_DIR / f"{name}.json"
-        if preset_file.exists():
-            preset_file.unlink()
-            # Clear active preset if it was the deleted one
-            if self.get_active_preset() == name:
-                self._set_active_preset(None)
-            return True
-        return False
-
-    def get_active_preset(self) -> str | None:
-        """Get the name of the currently active preset."""
-        if not ACTIVE_PRESET_FILE.exists():
-            return None
-        try:
-            return ACTIVE_PRESET_FILE.read_text().strip() or None
-        except Exception:
-            return None
-
-    def _set_active_preset(self, name: str | None) -> None:
-        """Set the active preset name."""
-        if name:
-            ACTIVE_PRESET_FILE.write_text(name)
-        elif ACTIVE_PRESET_FILE.exists():
-            ACTIVE_PRESET_FILE.unlink()
 
 
 # Global storage instance

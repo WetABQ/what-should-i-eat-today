@@ -1,9 +1,9 @@
 /**
- * Ratings store using localStorage for persistence.
- * No server dependency - all data stays in browser.
+ * Ratings store backed by server API.
+ * All reads/writes go through the backend — no localStorage.
  */
 
-import { ref, watch } from 'vue'
+import { ref } from 'vue'
 
 export interface Rating {
   food_name: string
@@ -13,30 +13,18 @@ export interface Rating {
   updated_at: string
 }
 
-const STORAGE_KEY = 'food-ratings'
+// Reactive ratings list
+export const ratings = ref<Rating[]>([])
 
-// Load ratings from localStorage
-function loadRatings(): Rating[] {
+// Fetch all ratings from server
+export async function fetchRatings() {
   try {
-    const data = localStorage.getItem(STORAGE_KEY)
-    return data ? JSON.parse(data) : []
-  } catch {
-    return []
+    const res = await fetch('/api/ratings')
+    ratings.value = await res.json()
+  } catch (e) {
+    console.error('Failed to fetch ratings:', e)
   }
 }
-
-// Save ratings to localStorage
-function saveRatings(ratings: Rating[]) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(ratings))
-}
-
-// Reactive ratings list
-export const ratings = ref<Rating[]>(loadRatings())
-
-// Watch for changes and save to localStorage
-watch(ratings, (newRatings) => {
-  saveRatings(newRatings)
-}, { deep: true })
 
 // Get ratings as a dictionary (food_name -> score)
 export function getRatingsDict(): Record<string, number> {
@@ -53,45 +41,39 @@ export function getRating(foodName: string): number {
   return rating?.score || 0
 }
 
-// Set or update a rating
-export function setRating(foodName: string, score: number, diningHall: string | null = null) {
-  const now = new Date().toISOString()
-  const existing = ratings.value.find(r => r.food_name === foodName)
-
-  if (existing) {
-    existing.score = score
-    existing.updated_at = now
-    if (diningHall) existing.dining_hall = diningHall
-  } else {
-    ratings.value.push({
-      food_name: foodName,
-      score,
-      dining_hall: diningHall,
-      created_at: now,
-      updated_at: now,
+// Set or update a rating via server API
+export async function setRating(foodName: string, score: number, diningHall: string | null = null) {
+  try {
+    const res = await fetch('/api/ratings', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ food_name: foodName, score, dining_hall: diningHall }),
     })
+    const saved: Rating = await res.json()
+
+    // Update local ref
+    const existing = ratings.value.find(r => r.food_name === foodName)
+    if (existing) {
+      existing.score = saved.score
+      existing.updated_at = saved.updated_at
+      if (saved.dining_hall) existing.dining_hall = saved.dining_hall
+    } else {
+      ratings.value.push(saved)
+    }
+  } catch (e) {
+    console.error('Failed to save rating:', e)
   }
 }
 
-// Delete a rating
-export function deleteRating(foodName: string) {
-  const index = ratings.value.findIndex(r => r.food_name === foodName)
-  if (index !== -1) {
-    ratings.value.splice(index, 1)
+// Delete a rating via server API
+export async function deleteRating(foodName: string) {
+  try {
+    await fetch(`/api/ratings/${encodeURIComponent(foodName)}`, { method: 'DELETE' })
+    const index = ratings.value.findIndex(r => r.food_name === foodName)
+    if (index !== -1) {
+      ratings.value.splice(index, 1)
+    }
+  } catch (e) {
+    console.error('Failed to delete rating:', e)
   }
-}
-
-// Import ratings (replace all)
-export function importRatings(newRatings: Rating[]) {
-  ratings.value = newRatings
-}
-
-// Export ratings
-export function exportRatings(): Rating[] {
-  return ratings.value
-}
-
-// Clear all ratings
-export function clearRatings() {
-  ratings.value = []
 }
